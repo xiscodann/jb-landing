@@ -1,0 +1,16 @@
+@import '@styles/base/variables';
+
+.list-content {
+  margin-bottom: 150px;
+}
+
+.list {
+  h2 {
+    margin-top: 90px;
+    margin-bottom: 50px;
+    text-align: center;
+    span {
+      color: map-get($colors, 'blue-dark');
+    }
+  }
+}

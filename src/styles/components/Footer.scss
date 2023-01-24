@@ -1,0 +1,41 @@
+@import '@styles/base/variables';
+
+footer {
+  background-color: #f9f9fb;
+  border-top-left-radius: 100px;
+}
+
+.footer {
+  $parent: &;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+  &__logo {
+    position: relative;
+    width: 228px;
+    height: 58px;
+    margin: auto;
+  }
+  &__item {
+    &--options {
+      color: map-get($colors, 'blue-dark');
+      ul > li {
+        list-style: none;
+        margin: 10px 0;
+      }
+    }
+    &--info {
+      color: map-get($colors, 'blue-dark');
+      ul > li {
+        list-style: none;
+        margin: 10px 0;
+        opacity: 0.8;
+      }
+    }
+  }
+  &__copyright {
+    color: map-get($colors, 'blue-dark');
+    opacity: 0.8;
+  }
+}

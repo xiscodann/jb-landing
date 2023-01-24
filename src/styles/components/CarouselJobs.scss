@@ -1,0 +1,57 @@
+@import '@styles/base/variables';
+
+.carousel-jobs {
+  $parent: &;
+  height: 400px;
+  background-color: transparent;
+  &__counter {
+    letter-spacing: 5px;
+    position: relative;
+    margin-bottom: -70px;
+    z-index: 2;
+    p {
+      font-size: 24px;
+      span {
+        font-size: 34px;
+        font-weight: 600;
+      }
+    }
+  }
+  &__item {
+    top: 0;
+    height: 400px;
+    &--content {
+      display: flex;
+      gap: 20px;
+      justify-content: start;
+      padding: 5px 0;
+      p {
+        margin: 0;
+      }
+    }
+    &--image {
+      position: relative;
+      width: 25px;
+      min-width: 25px;
+      height: 25px;
+    }
+  }
+  &__options {
+    display: flex;
+    gap: 10%;
+    margin-top: -52px;
+    z-index: 2;
+    position: relative;
+    &--principal {
+      background-color: map-get($colors, 'blue-dark');
+      color: #fff;
+      font-weight: 600;
+      padding: 13px 70px;
+      border-radius: 50px;
+    }
+    &--secondary {
+      text-decoration: underline;
+      color: map-get($colors, 'blue-dark');
+    }
+  }
+}

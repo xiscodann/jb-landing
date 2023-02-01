@@ -67,6 +67,7 @@ const CarouselOfJobs = ({ data, type, isApplyForJob }) => {
           <Link
             href={`/#contact-us`}
             className='btn carousel-jobs__options--principal'
+            scroll={false}
           >
             CONTRACT SERVICE
           </Link>

@@ -69,6 +69,7 @@ const Layout = () => {
                 </p>
                 <Link
                   href={'/#contact-us'}
+                  scroll={false}
                   className='btn text-uppercase presentation__options--principal'
                 >
                   Contact us
@@ -162,7 +163,7 @@ const Layout = () => {
           </div>
         </section>
         <section className='container mx-auto row help-your-business'>
-          <div className='col-12 col-lg-8 row'>
+          <div className='col-10 col-lg-8 row order-2 order-lg-1'>
             <div className='col-12 col-sm-6 col-md-4 my-2'>
               <div className='help-your-business__item'>
                 <div className='help-your-business__item--image'>
@@ -215,7 +216,7 @@ const Layout = () => {
               </div>
             </div>
           </div>
-          <div className='col-12 col-md-4 help-your-business__title d-none d-lg-block'>
+          <div className='col-12 col-md-10 col-lg-4 help-your-business__title order-1 order-lg-2'>
             <h1>
               <span>How</span> do we help your business?
             </h1>

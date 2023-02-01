@@ -17,7 +17,7 @@ const Header = () => {
       document.getElementById('presentation-article') ||
       document.getElementById('apply-content') ||
       document.getElementById('work-form');
-    const timeToChangeContrast = scrollPosition > article?.scrollHeight - 60;
+    const timeToChangeContrast = scrollPosition > article?.scrollHeight - 20;
     setItsTimeToChangeContrast(timeToChangeContrast);
   }, [scrollPosition]);
 
@@ -60,7 +60,11 @@ const Header = () => {
               <Link href={'/'} onClick={() => setIsOpen(false)}>
                 Home
               </Link>
-              <Link href={'/#what-we-do'} onClick={() => setIsOpen(false)}>
+              <Link
+                href={'/#what-we-do'}
+                scroll={false}
+                onClick={() => setIsOpen(false)}
+              >
                 Our services
               </Link>
               <Link href={'/apply'} onClick={() => setIsOpen(false)}>
@@ -68,6 +72,7 @@ const Header = () => {
               </Link>
               <Link
                 href={'/#contact-us'}
+                scroll={false}
                 className={`header__menu--principal ${
                   itsTimeToChangeContrast ? 'contrast' : ''
                 }`}

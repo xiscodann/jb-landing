@@ -132,6 +132,7 @@ const Apply = () => {
             <div className='apply__options flex-column flex-sm-row'>
               <Link
                 href={'#engineering'}
+                scroll={false}
                 type='button'
                 className='btn text-uppercase apply__options--principal'
               >
@@ -139,6 +140,7 @@ const Apply = () => {
               </Link>
               <Link
                 href={'#technical'}
+                scroll={false}
                 type='button'
                 className='btn text-uppercase apply__options--principal'
               >

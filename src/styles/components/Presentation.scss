@@ -172,6 +172,18 @@
       transform: translateX(-50%);
       z-index: 1;
       top: -22px;
+      @include mq-lg {
+        left: 43%;
+      }
+      @include mq-md {
+        left: 41%;
+      }
+      @include mq-sm {
+        left: 38%;
+      }
+      @include mq-xs {
+        display: none;
+      }
     }
   }
 }
@@ -193,10 +205,10 @@
     min-height: 140px;
     padding: 0 12px;
     @include mq-lg {
-      min-height: 155px;
+      min-height: 180px;
     }
     @include mq-xs {
-      min-height: 113px;
+      min-height: 135px;
     }
     &--image {
       position: relative;
@@ -211,6 +223,11 @@
       text-align: right;
       position: relative;
       z-index: 5;
+      @include mq-md {
+        font-size: 1.9rem;
+        text-align: center;
+        margin-bottom: 50px;
+      }
       span {
         color: map-get($colors, 'blue-dark');
       }
@@ -227,6 +244,15 @@
       }
       @include mq-lg {
         left: -5px;
+      }
+      @include mq-md {
+        left: 8%;
+      }
+      @include mq-sm {
+        left: 2%;
+      }
+      @include mq-xs {
+        display: none;
       }
     }
   }

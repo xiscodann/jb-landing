@@ -26,8 +26,12 @@ const Footer = () => {
           <div className='col-12 col-lg-5  footer__item--options'>
             <ul>
               <Link href={'/apply'}>Apply for a job</Link>
-              <Link href={'/#contact-us'}>Contact us</Link>
-              <Link href={'/#what-we-do'}>Our services</Link>
+              <Link href={'/#contact-us'} scroll={false}>
+                Contact us
+              </Link>
+              <Link href={'/#what-we-do'} scroll={false}>
+                Our services
+              </Link>
             </ul>
           </div>
         </div>

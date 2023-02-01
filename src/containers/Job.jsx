@@ -73,6 +73,7 @@ const Job = ({ job }) => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   }, [step]);
+
   return (
     <>
       <Header />

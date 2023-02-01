@@ -534,7 +534,7 @@ const Job = ({ job }) => {
                       <option value='No'>NO</option>
                     </select>
                     <label htmlFor='driver_license'>
-                      Do you currently have a driver's license?
+                      Do you currently have a driver&apos;s license?
                     </label>
                   </div>
                 </div>

@@ -1,0 +1,41 @@
+/* for desktop */
+.whatsapp {
+  $parent: &;
+  &__float {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    &--image {
+      position: relative;
+      width: 45px;
+      height: 45px;
+    }
+  }
+}
+
+/* for mobile */
+@media screen and (max-width: 767px) {
+  .whatsapp {
+    &__float {
+      width: 50px;
+      height: 50px;
+      bottom: 20px;
+      right: 10px;
+      &--image {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}

@@ -1,15 +1,33 @@
 @import '@styles/base/variables';
+@import '@styles/base/mixins';
 
 .header {
   $parent: &;
-  margin-top: 20px;
+  padding: 20px 0 0 0;
   position: fixed;
   width: 100%;
   z-index: 100;
+  transition: 0.2s all;
+  backdrop-filter: blur(8px);
+  background-color: rgb(105 52 49 / 63%);
+  &.contrast {
+    background-color: rgb(255 255 255 / 50%);
+    box-shadow: 0 4px 16px rgb(0 0 0 / 5%);
+  }
   &__logo {
     filter: brightness(0) invert(1);
+    &.contrast {
+      filter: none;
+    }
   }
   &__menu {
+    @include mq-sm {
+      gap: 35px;
+      padding-top: 75px;
+      height: 100vh;
+      padding-bottom: 160px;
+      justify-content: center;
+    }
     a {
       color: #fff;
       text-decoration: none;
@@ -20,6 +38,10 @@
       &:hover {
         opacity: 1;
       }
+      @include mq-sm {
+        font-size: 1.3rem;
+        margin: 0;
+      }
     }
     &--principal {
       background-color: #fff;
@@ -27,6 +49,33 @@
       border-radius: 50px;
       padding: 7px 25px;
       opacity: 1 !important;
+      &.contrast {
+        background-color: map-get($colors, 'red-wine');
+        color: #fff !important;
+      }
+    }
+    &.contrast {
+      a {
+        color: map-get($colors, 'red-wine');
+      }
+    }
+  }
+
+  &.minimize {
+    padding: 7px 0 5px 0;
+  }
+
+  .navbar-toggler {
+    border: 0;
+    box-shadow: none;
+    filter: brightness(0) invert(1);
+    &.contrast {
+      filter: brightness(0);
+    }
+  }
+  .navbar-collapse.show {
+    @include mq-sm {
+      height: 100vh;
     }
   }
 }

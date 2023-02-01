@@ -2,6 +2,8 @@ import React from 'react';
 import Image from 'next/image';
 import Header from '@components/Header';
 import CarouselOfJobs from '@components/CarouselOfJobs';
+import Footer from '@components/Footer';
+import Link from 'next/link';
 
 import presentationImage from '@images/presentation-image.png';
 import hiringImage from '@images/hiring-image.png';
@@ -11,7 +13,7 @@ import iconPresentation2 from '@icons/presentation-icon-2.png';
 import iconPresentation3 from '@icons/presentation-icon-3.png';
 import iconCheck from '@icons/check.png';
 import iconCheck2 from '@icons/check-2.png';
-import Footer from '@components/Footer';
+import circleTitle from '@images/circle.png';
 
 const hiring = [
   {
@@ -31,22 +33,16 @@ const hiring = [
 
 const jobs = [
   {
-    title: 'Out of the Box Staffing Services',
+    title: 'Staffing Services',
     subtitle: '',
     description:
-      'We know that the toughest single challenge in running your business is finding the right people. We are experts at finding international talent for full time positions, project base, or nearshore services. We service from new entrepreneurs to the largest asset-based companies.',
+      'We know that the toughest single challenge in running your business is finding the right people. We are experts at finding international talent for full time positions, project base, or nearshore services. We service from new entrepreneurs to the largest asset-based companies. Improve your overall performance and reduce costs by outsourcing our bilingual professionals for entry-level, and senior positions.',
   },
   {
-    title: 'Otro titulo de prueba',
-    subtitle: 'Este si tiene',
-    description:
-      'We know that the toughest single challenge in running your business is finding the right people. We are experts at finding international talent for full time positions, project base, or nearshore services. We service from new entrepreneurs to the largest asset-based companies.',
-  },
-  {
-    title: 'La prueba definitiva',
+    title: 'Operational Excellence Consulting',
     subtitle: '',
     description:
-      'We know that the toughest single challenge in running your business is finding the right people. We are experts at finding international talent for full time positions, project base, or nearshore services. We service from new entrepreneurs to the largest asset-based companies.',
+      'We are expert on reducing waste, developing people, and transforming your operations using Lean Leadership methodologies.',
   },
 ];
 
@@ -54,9 +50,9 @@ const Layout = () => {
   return (
     <>
       <Header />
-      <article className='presentation-content'>
+      <article className='presentation-content' id='presentation-article'>
         <section className='presentation container mx-auto row'>
-          <div className='col-12 col-sm-6'>
+          <div className='col-12 col-lg-6 order-2 order-lg-1 text-center text-lg-start pt-4 pt-lg-0'>
             <h1>
               <span>Innovate solutions</span> for your business, we can
               definitely help you succeed
@@ -66,29 +62,29 @@ const Layout = () => {
               manufacturing. We source the best bilingual technical talent from
               Latin America at reasonable costs.
             </p>
-            <div className='presentation__options'>
+            <div className='presentation__options justify-content-center justify-content-lg-start flex-column flex-sm-row'>
               <div>
                 <p className='text-center'>
                   <small>Are you a company?</small>
                 </p>
-                <button
-                  type='button'
+                <Link
+                  href={'/#contact-us'}
                   className='btn text-uppercase presentation__options--principal'
                 >
                   Contact us
-                </button>
+                </Link>
               </div>
               <div>
                 <p className='text-center'>
                   <small>Do you want to work with us?</small>
                 </p>
-                <button type='button' className='btn text-uppercase text-white'>
+                <Link href={'/apply'} className='btn text-uppercase text-white'>
                   Apply for a job
-                </button>
+                </Link>
               </div>
             </div>
           </div>
-          <div className='col-12 col-sm-6 presentation__image'>
+          <div className='col-12 col-lg-6 presentation__image order-1 order-lg-2'>
             <div className='presentation__image--photo'>
               <Image src={presentationImage} alt='presentation image' fill />
             </div>
@@ -149,16 +145,25 @@ const Layout = () => {
         </section>
       </article>
       <article>
-        <section className='container text-center'>
-          <h2>
-            <span>What</span> we do?
-          </h2>
-          <p>Our offer covers three essential aspects</p>
-          <CarouselOfJobs data={jobs} />
+        <section
+          className='container text-center what-we-do anchor'
+          id='what-we-do'
+        >
+          <div className='what-we-do__title'>
+            <h2>
+              <span>What</span> we do?
+            </h2>
+            <div className='what-we-do__title--image'>
+              <Image src={circleTitle} alt='circle' fill />
+            </div>
+          </div>
+          <div className='my-5'>
+            <CarouselOfJobs data={jobs} />
+          </div>
         </section>
         <section className='container mx-auto row help-your-business'>
-          <div className='col-12 col-md-8 row'>
-            <div className='col-6 col-md-4 my-2'>
+          <div className='col-12 col-lg-8 row'>
+            <div className='col-12 col-sm-6 col-md-4 my-2'>
               <div className='help-your-business__item'>
                 <div className='help-your-business__item--image'>
                   <Image src={iconCheck} alt='Check' fill />
@@ -166,7 +171,7 @@ const Layout = () => {
                 <p>Solve immediate and long-term talent needs</p>
               </div>
             </div>
-            <div className='col-6 col-md-4 my-2'>
+            <div className='col-12 col-sm-6 col-md-4 my-2'>
               <div className='help-your-business__item'>
                 <div className='help-your-business__item--image'>
                   <Image src={iconCheck} alt='Check' fill />
@@ -174,7 +179,7 @@ const Layout = () => {
                 <p>We handle all the immigration process for the work visas</p>
               </div>
             </div>
-            <div className='col-6 col-md-4 my-2'>
+            <div className='col-12 col-sm-6 col-md-4 my-2'>
               <div className='help-your-business__item'>
                 <div className='help-your-business__item--image'>
                   <Image src={iconCheck} alt='Check' fill />
@@ -182,7 +187,7 @@ const Layout = () => {
                 <p>We handle logistics; housing, transportation</p>
               </div>
             </div>
-            <div className='col-6 col-md-4 my-2'>
+            <div className='col-12 col-sm-6 col-md-4 my-2'>
               <div className='help-your-business__item'>
                 <div className='help-your-business__item--image'>
                   <Image src={iconCheck} alt='Check' fill />
@@ -190,7 +195,7 @@ const Layout = () => {
                 <p>Save on relocation, payroll taxes, and more</p>
               </div>
             </div>
-            <div className='col-6 col-md-4 my-2'>
+            <div className='col-12 col-sm-6 col-md-4 my-2'>
               <div className='help-your-business__item'>
                 <div className='help-your-business__item--image'>
                   <Image src={iconCheck} alt='Check' fill />
@@ -198,7 +203,7 @@ const Layout = () => {
                 <p>98% employee retention</p>
               </div>
             </div>
-            <div className='col-6 col-md-4 my-2'>
+            <div className='col-12 col-sm-6 col-md-4 my-2'>
               <div className='help-your-business__item'>
                 <div className='help-your-business__item--image'>
                   <Image src={iconCheck} alt='Check' fill />
@@ -210,25 +215,33 @@ const Layout = () => {
               </div>
             </div>
           </div>
-          <div className='col-12 col-md-4 help-your-business__title d-none d-md-block'>
+          <div className='col-12 col-md-4 help-your-business__title d-none d-lg-block'>
             <h1>
               <span>How</span> do we help your business?
             </h1>
+            <div className='help-your-business__title--image'>
+              <Image src={circleTitle} alt='circle' fill />
+            </div>
           </div>
         </section>
       </article>
       <article className='hiring-container'>
         <section className='container mx-auto hiring'>
-          <h1>
-            <span>Who</span> we are hiring?
-          </h1>
+          <div className='hiring__title'>
+            <h2>
+              <span>Who</span> we are hiring?
+            </h2>
+            <div className='hiring__title--image'>
+              <Image src={circleTitle} alt='circle' fill />
+            </div>
+          </div>
           <div className='row'>
-            <div className='col-5  d-none d-md-block'>
+            <div className='col-4 col-xl-5 d-none d-lg-block'>
               <div className='hiring__image'>
                 <Image src={hiringImage} alt='Who we are hiring?' fill />
               </div>
             </div>
-            <div className='row col-12 col-md-7 d-flex align-items-center jusitfy-content-center'>
+            <div className='row hiring__content col-12 col-lg-8 col-xl-7 d-flex align-items-center jusitfy-content-center'>
               {hiring.map(({ title, jobs }, i) => (
                 <div key={i} className='col-12 col-md-6'>
                   <div className='hiring__item'>
@@ -245,9 +258,9 @@ const Layout = () => {
                         </li>
                       ))}
                     </ul>
-                    <button type='button' className='btn hiring__item--button'>
+                    <Link href={'/apply'} className='btn hiring__item--button'>
                       See more jobs
-                    </button>
+                    </Link>
                   </div>
                 </div>
               ))}
@@ -255,16 +268,21 @@ const Layout = () => {
           </div>
         </section>
       </article>
-      <article>
+      <article id='contact-us' className='anchor'>
         <section className='container mx-auto contact'>
-          <h1>
-            <span>Contact</span> us
-          </h1>
-          <p>
-            Together we’ll create and refine your plan for success. We didn’t
-            get there alone. And neither will you.
-          </p>
-          <form className='col-12 col-md-6 mx-auto contact__form'>
+          <div className='contact__title'>
+            <h2>
+              <span>Contact</span> us
+            </h2>
+            <p>
+              Together we’ll create and refine your plan for success. We didn’t
+              get there alone. And neither will you.
+            </p>
+            <div className='contact__title--image'>
+              <Image src={circleTitle} alt='circle' fill />
+            </div>
+          </div>
+          <form className='col-12 col-lg-7 col-xl-6 mx-auto contact__form'>
             <div className='form-floating mb-3'>
               <input
                 type='text'

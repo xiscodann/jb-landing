@@ -8,9 +8,13 @@ import '@styles/components/CarouselJobs.scss';
 import '@styles/components/Hiring.scss';
 import '@styles/components/ContactUs.scss';
 import '@styles/components/Footer.scss';
+import '@styles/components/Check.scss';
+import '@styles/components/WhatsAppButton.scss';
 
 import '@styles/components/Apply.scss';
 import '@styles/components/ListJobs.scss';
+
+import '@styles/components/WorkForm.scss';
 
 const lato = Lato({ subsets: ['latin'], weight: ['400', '900'] });
 

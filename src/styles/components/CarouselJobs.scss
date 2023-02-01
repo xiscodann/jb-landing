@@ -1,14 +1,21 @@
 @import '@styles/base/variables';
+@import '@styles/base/mixins';
 
 .carousel-jobs {
   $parent: &;
-  height: 400px;
   background-color: transparent;
+  padding: 0;
+  @include mq-sm {
+    height: auto;
+  }
   &__counter {
     letter-spacing: 5px;
     position: relative;
     margin-bottom: -70px;
     z-index: 2;
+    @include mq-sm {
+      padding-bottom: 15px;
+    }
     p {
       font-size: 24px;
       span {
@@ -19,11 +26,27 @@
   }
   &__item {
     top: 0;
-    height: 400px;
+    min-height: 300px;
+    &.carousel-item-start,
+    &.carousel-item-end,
+    &.active {
+      display: flex;
+      align-items: center;
+    }
+    @include mq-sm {
+      height: auto;
+    }
+    &--title {
+      height: 100%;
+      @include mq-sm {
+        height: auto;
+        padding-top: 60px;
+      }
+    }
     &--content {
       display: flex;
       gap: 20px;
-      justify-content: start;
+      justify-content: flex-start;
       padding: 5px 0;
       p {
         margin: 0;
@@ -38,20 +61,36 @@
   }
   &__options {
     display: flex;
-    gap: 10%;
-    margin-top: -52px;
+    gap: 25px;
+    margin-top: 20px;
     z-index: 2;
     position: relative;
+    @include mq-sm {
+      gap: 10px;
+      margin-top: 50px;
+    }
     &--principal {
       background-color: map-get($colors, 'blue-dark');
       color: #fff;
       font-weight: 600;
       padding: 13px 70px;
       border-radius: 50px;
+      &:hover {
+        background-color: map-get($colors, 'blue-light');
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        color: #fff;
+      }
     }
     &--secondary {
-      text-decoration: underline;
       color: map-get($colors, 'blue-dark');
+      border: 1px solid map-get($colors, 'blue-dark');
+      border-radius: 50px;
+      padding: 13px 20px;
+      &:hover {
+        color: map-get($colors, 'blue-light');
+        border: 1px solid map-get($colors, 'blue-light');
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+      }
     }
   }
 }

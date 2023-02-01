@@ -1,4 +1,5 @@
 @import '@styles/base/variables';
+@import '@styles/base/mixins';
 
 footer {
   background-color: #f9f9fb;
@@ -16,21 +17,38 @@ footer {
     width: 228px;
     height: 58px;
     margin: auto;
+    @include mq-lg {
+      width: 170px;
+      height: 42px;
+    }
   }
   &__item {
     &--options {
       color: map-get($colors, 'blue-dark');
-      ul > li {
-        list-style: none;
-        margin: 10px 0;
+      ul {
+        padding: 0;
+        li {
+          list-style: none;
+          margin: 10px 0;
+        }
+        a {
+          display: flex;
+          flex-direction: column;
+          text-decoration: none;
+          color: map-get($colors, 'blue-dark');
+          margin: 11px;
+        }
       }
     }
     &--info {
       color: map-get($colors, 'blue-dark');
-      ul > li {
-        list-style: none;
-        margin: 10px 0;
-        opacity: 0.8;
+      ul {
+        padding: 0;
+        li {
+          list-style: none;
+          margin: 10px 0;
+          opacity: 0.8;
+        }
       }
     }
   }

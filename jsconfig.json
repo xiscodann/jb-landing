@@ -7,7 +7,9 @@
       "@containers/*": ["containers/*"],
       "@styles/*": ["styles/*"],
       "@images/*": ["assets/images/*"],
-      "@icons/*": ["assets/icons/*"]
+      "@icons/*": ["assets/icons/*"],
+      "@helpers/*": ["helper/*"],
+      "@hooks/*": ["hooks/*"]
     }
   }
 }

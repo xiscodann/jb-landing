@@ -71,12 +71,12 @@ const Layout = () => {
                   scroll={false}
                   className='btn text-uppercase red'
                 >
-                  I'M A COMPANY
+                  I&#39;M A COMPANY
                 </Link>
               </div>
               <div>
                 <Link href={'/apply'} className='btn text-uppercase blue'>
-                  I'M A WORKER
+                  I&#39;M A WORKER
                 </Link>
               </div>
             </div>
@@ -225,12 +225,12 @@ const Layout = () => {
                   scroll={false}
                   className='btn text-uppercase red'
                 >
-                  I'M A COMPANY
+                  I&#39;M A COMPANY
                 </Link>
               </div>
               <div className=''>
                 <Link href={'/apply'} className='btn text-uppercase blue'>
-                  I'M A WORKER
+                  I&#39;M A WORKER
                 </Link>
               </div>
             </div>

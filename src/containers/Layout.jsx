@@ -214,8 +214,10 @@ const Layout = () => {
         <section className='container mx-auto contact row'>
           <div className='col-12 col-lg-6'>
             <h2>CONTACT US</h2>
-            <h3>TOGETHER WE’LL CREATE AND REFINE YOUR PLAN FOR SUCCESS.</h3>
-            <p>We didn’t get there alone and neither will you.</p>
+            <h3>
+              TOGETHER WE&apos;LL CREATE AND REFINE YOUR PLAN FOR SUCCESS.
+            </h3>
+            <p>We didn&apos;t get there alone and neither will you.</p>
             <div className='contact__options justify-content-left justify-content-lg-start flex-column flex-sm-row'>
               <div className=''>
                 <Link

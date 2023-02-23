@@ -211,7 +211,7 @@ const Apply = () => {
           </div>
         </section>
         <section className='container col-12 col-md-8 col-lg-6 col-xl-5 create-and-refine'>
-          <p>TOGETHER WE’LL CREATE AND REFINE YOUR PLAN FOR SUCCESS.</p>
+          <p>TOGETHER WE&apos;LL CREATE AND REFINE YOUR PLAN FOR SUCCESS.</p>
         </section>
       </article>
       <article className='list-content px-2'>

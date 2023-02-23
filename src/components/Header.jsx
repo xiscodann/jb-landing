@@ -22,19 +22,10 @@ const Header = () => {
   }, [scrollPosition]);
 
   return (
-    <header
-      className={`header ${scrollPosition > 20 ? 'minimize' : ''} ${
-        itsTimeToChangeContrast ? 'contrast' : ''
-      }`}
-    >
+    <header className={`header ${scrollPosition > 20 ? 'minimize' : ''}`}>
       <Navbar collapseOnSelect expand='md' expanded={isOpen}>
         <div className='container'>
-          <Link
-            href={'/'}
-            className={`header__logo ${
-              itsTimeToChangeContrast ? 'contrast' : ''
-            }`}
-          >
+          <Link href={'/'} className={`header__logo`}>
             <Image
               src={logo}
               alt='Joe Bar Business Solition logo'
@@ -44,22 +35,10 @@ const Header = () => {
           </Link>
           <Navbar.Toggle
             aria-controls='responsive-navbar-nav'
-            className={`${itsTimeToChangeContrast ? 'contrast' : ''}`}
             onClick={() => setIsOpen(isOpen ? false : 'expanded')}
           />
-          <Navbar.Collapse
-            id='responsive-navbar-nav'
-            className={`${itsTimeToChangeContrast ? 'contrast' : ''}`}
-            isOpen={isOpen}
-          >
-            <Nav
-              className={`ms-auto header__menu d-flex align-items-center ${
-                itsTimeToChangeContrast ? 'contrast' : ''
-              }`}
-            >
-              <Link href={'/'} onClick={() => setIsOpen(false)}>
-                Home
-              </Link>
+          <Navbar.Collapse id='responsive-navbar-nav' isOpen={isOpen}>
+            <Nav className={`ms-auto header__menu d-flex align-items-center`}>
               <Link
                 href={'/#what-we-do'}
                 scroll={false}
@@ -73,12 +52,10 @@ const Header = () => {
               <Link
                 href={'/#contact-us'}
                 scroll={false}
-                className={`header__menu--principal ${
-                  itsTimeToChangeContrast ? 'contrast' : ''
-                }`}
+                className={`header__menu--principal`}
                 onClick={() => setIsOpen(false)}
               >
-                Contact us
+                CONTACT US
               </Link>
             </Nav>
           </Navbar.Collapse>

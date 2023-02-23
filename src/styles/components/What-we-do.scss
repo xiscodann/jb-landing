@@ -1,0 +1,29 @@
+@import '@styles/base/variables';
+@import '@styles/base/mixins';
+
+.what-we-do {
+  $parent: &;
+  padding: 80px 20px 0 20px;
+  &__info {
+    text-align: left;
+    @include mq-sm {
+      text-align: center;
+    }
+    h3 {
+      color: map-get($colors, 'black-principal');
+      font-family: '__Bebas_Neue_a0fe44';
+      font-size: 4rem;
+      @include mq-sm {
+        font-size: 3rem;
+      }
+    }
+    h4 {
+      color: map-get($colors, 'red-wine');
+      font-family: '__Bebas_Neue_a0fe44';
+      font-size: 2.5rem;
+    }
+    p {
+      color: map-get($colors, 'blue-dark');
+    }
+  }
+}

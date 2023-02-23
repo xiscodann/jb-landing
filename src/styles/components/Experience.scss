@@ -1,0 +1,21 @@
+@import '@styles/base/variables';
+@import '@styles/base/mixins';
+
+.experience-container {
+  background-color: map-get($colors, 'blue-dark');
+  clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
+  position: relative;
+  margin: 60px 0;
+  @include mq-lg {
+    clip-path: polygon(0 0, 100% 0, 100% 98%, 0% 100%);
+  }
+  @include mq-sm {
+    clip-path: polygon(0 0, 100% 0, 100% 98.5%, 0% 100%);
+  }
+}
+.experience {
+  $parent: &;
+  text-align: center;
+  padding: 90px 12px;
+  color: #fff;
+}

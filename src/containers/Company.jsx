@@ -118,51 +118,38 @@ const jobsTechnical = [
   },
 ];
 
-const Apply = () => {
+const Company = () => {
   return (
     <>
       <Header />
-      <article className='apply-content' id='apply-content'>
-        <section className='apply container mx-auto row'>
+      <article className='company-content px-2' id='company-content'>
+        <section className='company container mx-auto row'>
           <div className='col-12 col-sm-10 col-md-8 col-lg-6'>
-            <h1>Apply for a job with Joe Bar Business</h1>
-            <form className='apply__form'>
-              <div className='input-group mb-3'>
-                <input
-                  type='text'
-                  className='form-control'
-                  placeholder='Your email'
-                  aria-label="Recipient's username"
-                  aria-describedby='button-addon2'
-                  required
-                />
-                <button
-                  className='btn btn-outline-secondary'
-                  type='submit'
-                  id='button-addon2'
-                >
-                  Apply
-                </button>
-              </div>
-            </form>
-            <div className='apply__image--points'>
+            <h1>FIND YOUR TECHNICAL TALENT WITH JOE BAR BUSINESS</h1>
+            <div className='w-100 text-center'>
+              <a href='#contact' className='btn'>
+                CONTACT US
+              </a>
+            </div>
+
+            <div className='company__image--points'>
               {/*<Image src={decorPoint} alt='apply image' fill />*/}
             </div>
           </div>
         </section>
       </article>
       <article className='px-2'>
-        <section className='container col-12 col-md-10 mx-auto we-help-you'>
-          <div className='we-help-you__benefits'>
+        <section className='container col-12 col-md-10 mx-auto help-your-business'>
+          <div className='help-your-business__benefits'>
             <h4>BENEFITS</h4>
-            <h3>HOW DO WE HELP YOU?</h3>
+            <h3>HOW DO WE HELP YOUR BUSINESS?</h3>
           </div>
-          <div className='row we-help-you__explain g-4'>
-            <div className='col-6'>
+          <div className='row help-your-business__explain g-4'>
+            <div className='col-6 col-md-3'>
               <div className='card'>
                 <div className='card-body'>
-                  <p className='card-text small'>
-                    Provide you an international work assignment.
+                  <p className='card-text'>
+                    We handle logistics; housing, transportation
                   </p>
                 </div>
               </div>
@@ -171,22 +158,8 @@ const Apply = () => {
               <div className='card'>
                 <div className='card-body'>
                   <p className='card-text'>
-                    Support with cultural assimilation
+                    Solve immediate and long-term talent needs
                   </p>
-                </div>
-              </div>
-            </div>
-            <div className='col-6 col-md-3'>
-              <div className='card'>
-                <div className='card-body'>
-                  <p className='card-text'>Intensive English classes</p>
-                </div>
-              </div>
-            </div>
-            <div className='col-6 col-md-3'>
-              <div className='card'>
-                <div className='card-body'>
-                  <p className='card-text'>We provide health insurance</p>
                 </div>
               </div>
             </div>
@@ -194,7 +167,24 @@ const Apply = () => {
               <div className='card'>
                 <div className='card-body'>
                   <p className='card-text small'>
-                    Comprehensive and competitive compensation package
+                    We handle all the immigration process for the work visas
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className='col-6 col-md-3'>
+              <div className='card'>
+                <div className='card-body'>
+                  <p className='card-text'>98% employee retention</p>
+                </div>
+              </div>
+            </div>
+            <div className='col-6'>
+              <div className='card'>
+                <div className='card-body'>
+                  <p className='card-text small'>
+                    Improve safety, profits, and efficiencies with self
+                    motivated employees
                   </p>
                 </div>
               </div>
@@ -203,28 +193,73 @@ const Apply = () => {
               <div className='card'>
                 <div className='card-body'>
                   <p className='card-text'>
-                    Opportunity to learn and gain new skills
+                    Save on relocation, payroll taxes, and more
                   </p>
                 </div>
               </div>
             </div>
           </div>
-        </section>
-        <section className='container col-12 col-md-8 col-lg-6 col-xl-5 create-and-refine'>
-          <p>TOGETHER WE’LL CREATE AND REFINE YOUR PLAN FOR SUCCESS.</p>
         </section>
       </article>
-      <article className='list-content px-2'>
+      <article className='list-services px-2'>
         <section className='container list anchor' id='engineering'>
-          <CarouselOfJobs
-            data={jobsEngineering}
-            type='engineering'
-            isApplyJob
-          />
+          <CarouselOfJobs data={jobsEngineering} type='engineering' />
         </section>
-        <span className='list-content__separator'></span>
+        <span className='list-services__separator'></span>
         <section className='container list anchor' id='technical'>
-          <CarouselOfJobs data={jobsTechnical} type='technical' isApplyJob />
+          <CarouselOfJobs data={jobsTechnical} type='technical' />
+        </section>
+      </article>
+      <article id='contact' className='px-2 px-md-0 anchor'>
+        <section className='container contact-form mx-auto'>
+          <h3>CONTACT US</h3>
+          <h4>INNOVATIVE SOLUTIONS FOR YOUR BUSINESS</h4>
+          <form className='col-12 mx-auto contact__form--form'>
+            <div className='form-floating mb-3'>
+              <input
+                type='text'
+                className='form-control'
+                id='name'
+                placeholder='Name'
+                required
+              />
+              <label htmlFor='name'>Name</label>
+            </div>
+            <div className='form-floating mb-3'>
+              <input
+                type='text'
+                className='form-control'
+                id='organization'
+                placeholder='Organization name'
+                required
+              />
+              <label htmlFor='organization'>Organization name</label>
+            </div>
+            <div className='form-floating mb-3'>
+              <input
+                type='email'
+                className='form-control'
+                id='email'
+                placeholder='Email'
+                required
+              />
+              <label htmlFor='email'>Email</label>
+            </div>
+            <div className='form-floating'>
+              <textarea
+                className='form-control'
+                placeholder='Leave a comment here'
+                id='message'
+                required
+              ></textarea>
+              <label htmlFor='message'>Message</label>
+            </div>
+            <div className='text-center'>
+              <button type='submit' className='btn'>
+                SEND
+              </button>
+            </div>
+          </form>
         </section>
       </article>
       <Footer />
@@ -232,4 +267,4 @@ const Apply = () => {
   );
 };
 
-export default Apply;
+export default Company;

@@ -15,6 +15,12 @@ import iconCheck from '@icons/check.png';
 import iconCheck2 from '@icons/check-2.png';
 import circleTitle from '@images/circle.png';
 
+import engineeringIcon from '@icons/engineering.svg';
+import technicalIcon from '@icons/technical.svg';
+import selectionIcon from '@icons/selection.svg';
+import managementIcon from '@icons/management.svg';
+import connectionIcon from '@icons/connection.svg';
+
 const hiring = [
   {
     title: 'Engineering jobs',
@@ -53,34 +59,24 @@ const Layout = () => {
       <article className='presentation-content' id='presentation-article'>
         <section className='presentation container mx-auto row'>
           <div className='col-12 col-lg-6 order-2 order-lg-1 text-center text-lg-start pt-4 pt-lg-0'>
-            <h1>
-              <span>Innovate solutions</span> for your business, we can
-              definitely help you succeed
-            </h1>
+            <h1>FIND THE BEST TECHNICAL TALENT FOR YOUR BUSINESS</h1>
             <p>
-              We provide technical staffing, and recruiting services for
-              manufacturing. We source the best bilingual technical talent from
-              Latin America at reasonable costs.
+              We are experts at finding international talent for full time
+              positions, projects, or nearshore services.
             </p>
             <div className='presentation__options justify-content-center justify-content-lg-start flex-column flex-sm-row'>
               <div>
-                <p className='text-center'>
-                  <small>Are you a company?</small>
-                </p>
                 <Link
-                  href={'/#contact-us'}
+                  href={'/company'}
                   scroll={false}
-                  className='btn text-uppercase presentation__options--principal'
+                  className='btn text-uppercase red'
                 >
-                  Contact us
+                  I'M A COMPANY
                 </Link>
               </div>
               <div>
-                <p className='text-center'>
-                  <small>Do you want to work with us?</small>
-                </p>
-                <Link href={'/apply'} className='btn text-uppercase text-white'>
-                  Apply for a job
+                <Link href={'/apply'} className='btn text-uppercase blue'>
+                  I'M A WORKER
                 </Link>
               </div>
             </div>
@@ -89,244 +85,155 @@ const Layout = () => {
             <div className='presentation__image--photo'>
               <Image src={presentationImage} alt='presentation image' fill />
             </div>
-            <div className='presentation__image--points'>
-              <Image src={decorPoint} alt='presentation image' fill />
-            </div>
           </div>
         </section>
-        <section className='container mx-auto why-us'>
-          <h2>
-            <span>Why</span> us?
-          </h2>
-          <p className='col-12 col-md-10 col-lg-8 col-xl-6 mx-auto'>
-            JoeBar Business Solutions is a staffing firm with offices in the
-            U.S., Mexico, and Colombia. We are looking for long term
-            relationships, not just transactions.
-          </p>
-          <div className='why-us__explain row'>
-            <div className='why-us__box col-12 col-md-4'>
-              <div className='why-us__box--content'>
-                <div className='why-us__box--image'>
-                  <Image src={iconPresentation1} alt='Our ramp icon' fill />
-                </div>
-              </div>
-              <p>
-                Our ramp up process is designed to empower your team and outfit
-                them with the tools they need to succeed
-              </p>
-            </div>
-            <div className='why-us__box col-12 col-md-4'>
-              <div className='why-us__box--content'>
-                <div className='why-us__box--image'>
-                  <Image src={iconPresentation2} alt='We want icon' fill />
-                </div>
-              </div>
-              <p>
-                We want to give each of you the time and guidance you deserve.
-                Whether you’re seeking a strategic alliance with the right
-                partner or a special skill set or tool
-              </p>
-            </div>
-            <div className='why-us__box col-12 col-md-4'>
-              <div className='why-us__box--content'>
-                <div className='why-us__box--image'>
-                  <Image
-                    src={iconPresentation3}
-                    alt='We can support icon'
-                    fill
-                  />
-                </div>
-              </div>
-              <p>
-                We can support your growth, limit your turnover, and put you on
-                a solid track to success and profit.
-              </p>
-            </div>
-          </div>
+      </article>
+      <article className='experience-container'>
+        <section className='container mx-auto experience'>
+          <h3 className='col-12 col-md-10 col-xl-10 mx-auto text-uppercase'>
+            We have more than 10 years of experience creating and executing
+            comprehensive strategies for identifying, recruiting, and hiring top
+            technical talent.
+          </h3>
         </section>
       </article>
       <article>
         <section
-          className='container text-center what-we-do anchor'
+          className='container text-center what-we-do anchor row mx-auto'
           id='what-we-do'
         >
-          <div className='what-we-do__title'>
-            <h2>
-              <span>What</span> we do?
-            </h2>
-            <div className='what-we-do__title--image'>
-              <Image src={circleTitle} alt='circle' fill />
-            </div>
+          <div className='col-12 col-lg-6 col-md-5'>
+            <p>OPERATIONAL EXCELLENCE</p>
           </div>
-          <div className='my-5'>
-            <CarouselOfJobs data={jobs} />
-          </div>
-        </section>
-        <section className='container mx-auto row help-your-business'>
-          <div className='col-10 col-lg-8 row order-2 order-lg-1'>
-            <div className='col-12 col-sm-6 col-md-4 my-2'>
-              <div className='help-your-business__item'>
-                <div className='help-your-business__item--image'>
-                  <Image src={iconCheck} alt='Check' fill />
-                </div>
-                <p>Solve immediate and long-term talent needs</p>
-              </div>
-            </div>
-            <div className='col-12 col-sm-6 col-md-4 my-2'>
-              <div className='help-your-business__item'>
-                <div className='help-your-business__item--image'>
-                  <Image src={iconCheck} alt='Check' fill />
-                </div>
-                <p>We handle all the immigration process for the work visas</p>
-              </div>
-            </div>
-            <div className='col-12 col-sm-6 col-md-4 my-2'>
-              <div className='help-your-business__item'>
-                <div className='help-your-business__item--image'>
-                  <Image src={iconCheck} alt='Check' fill />
-                </div>
-                <p>We handle logistics; housing, transportation</p>
-              </div>
-            </div>
-            <div className='col-12 col-sm-6 col-md-4 my-2'>
-              <div className='help-your-business__item'>
-                <div className='help-your-business__item--image'>
-                  <Image src={iconCheck} alt='Check' fill />
-                </div>
-                <p>Save on relocation, payroll taxes, and more</p>
-              </div>
-            </div>
-            <div className='col-12 col-sm-6 col-md-4 my-2'>
-              <div className='help-your-business__item'>
-                <div className='help-your-business__item--image'>
-                  <Image src={iconCheck} alt='Check' fill />
-                </div>
-                <p>98% employee retention</p>
-              </div>
-            </div>
-            <div className='col-12 col-sm-6 col-md-4 my-2'>
-              <div className='help-your-business__item'>
-                <div className='help-your-business__item--image'>
-                  <Image src={iconCheck} alt='Check' fill />
-                </div>
-                <p>
-                  Improve safety, profits, and efficiencies with self motivated
-                  employees
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className='col-12 col-md-10 col-lg-4 help-your-business__title order-1 order-lg-2'>
-            <h1>
-              <span>How</span> do we help your business?
-            </h1>
-            <div className='help-your-business__title--image'>
-              <Image src={circleTitle} alt='circle' fill />
-            </div>
+          <div className='col-12 col-lg-6 col-md-7 what-we-do__info'>
+            <h4>WHAT WE DO</h4>
+            <h3>OUT OF THE BOX TECHNICAL STAFFING SERVICES</h3>
+            <p>
+              We know that the toughest single challenge in running your
+              business is finding the right people. We are experts at finding
+              international talent for full time positions, project base, or
+              nearshore services. We service from new entrepreneurs to the
+              largest asset-based companies. Improve your overall performance
+              and reduce costs by outsourcing our bilingual professionals for
+              entry-level, and senior positions.
+            </p>
           </div>
         </section>
       </article>
       <article className='hiring-container'>
-        <section className='container mx-auto hiring'>
-          <div className='hiring__title'>
-            <h2>
-              <span>Who</span> we are hiring?
-            </h2>
-            <div className='hiring__title--image'>
-              <Image src={circleTitle} alt='circle' fill />
+        <h2>OUR SERVICES</h2>
+        <section className='container row mx-auto hiring d-flex justify-content-center'>
+          <div className='col-12 col-md-6 col-lg-5 col-xl-3'>
+            <div className='hiring__card red'>
+              <div className='hiring__card--image'>
+                <Image src={engineeringIcon} alt='Engineering services' fill />
+              </div>
+              <p className='hiring__card--title'>ENGINEERING</p>
+              <ul className='hiring__card--list'>
+                <li>Automation</li>
+                <li>Robotics</li>
+                <li>Industrial</li>
+                <li>Electrical</li>
+                <li>Mechanical</li>
+              </ul>
             </div>
           </div>
-          <div className='row'>
-            <div className='col-4 col-xl-5 d-none d-lg-block'>
-              <div className='hiring__image'>
-                <Image src={hiringImage} alt='Who we are hiring?' fill />
+          <div className='col-12 col-md-6 col-lg-5 col-xl-3'>
+            <div className='hiring__card blue'>
+              <div className='hiring__card--image'>
+                <Image src={technicalIcon} alt='Technical services' fill />
               </div>
+              <p className='hiring__card--title'>TECHNICAL</p>
+              <ul className='hiring__card--list'>
+                <li>Maintenance Technicians</li>
+                <li>Mechanical Designers</li>
+                <li>Certified Welders</li>
+                <li>Injection/Blow Molding</li>
+                <li>HVAC Technicians</li>
+              </ul>
             </div>
-            <div className='row hiring__content col-12 col-lg-8 col-xl-7 d-flex align-items-center jusitfy-content-center'>
-              {hiring.map(({ title, jobs }, i) => (
-                <div key={i} className='col-12 col-md-6'>
-                  <div className='hiring__item'>
-                    <p className='text-uppercase hiring__item--title'>
-                      {title}
-                    </p>
-                    <ul className='hiring__item--ul'>
-                      {jobs.map((job, jobIndex) => (
-                        <li key={jobIndex} className='hiring__item--li'>
-                          <div className='hiring__item--image'>
-                            <Image src={iconCheck2} alt='check' fill />
-                          </div>
-                          <p>{job}</p>
-                        </li>
-                      ))}
-                    </ul>
-                    <Link href={'/apply'} className='btn hiring__item--button'>
-                      See more jobs
-                    </Link>
-                  </div>
-                </div>
-              ))}
+          </div>
+          <div className='col-12 text-center mt-4'>
+            <a href='#contact-us' className='btn hiring__card--button'>
+              CONTACT US
+            </a>
+          </div>
+        </section>
+        <section className='container col-12 col-lg-9 col-xl-8 improve'>
+          <h3>
+            You can improve your{' '}
+            <span>overall performance and reduce costs</span> by hiring our
+            bilingual professionals for your entry-level and senior-level
+            positions.
+          </h3>
+        </section>
+      </article>
+      <article className='why-us-container'>
+        <h2>WHY US?</h2>
+        <section className='container mx-auto why-us row'>
+          <div className='col-12 col-lg-4 why-us__card'>
+            <div>
+              <div className='why-us__card--image'>
+                <Image src={selectionIcon} alt='Selection' fill />
+              </div>
+              <p className='why-us__card--title'>SELECTION</p>
+              <p className='why-us__card--text'>
+                We have a great pool of candidates from different industries;
+                Food and Beverage, Automotive, and equipment manufacturing.
+              </p>
+            </div>
+          </div>
+          <div className='col-12 col-md-4 why-us__card'>
+            <div>
+              <div className='why-us__card--image'>
+                <Image src={managementIcon} alt='Selection' fill />
+              </div>
+              <p className='why-us__card--title'>MANAGEMENT</p>
+              <p className='why-us__card--text'>
+                Manage full cycle of recruiting including sourcing and screening
+                candidates, performing interviews, and following through on
+                placements.
+              </p>
+            </div>
+          </div>
+          <div className='col-12 col-md-4 why-us__card'>
+            <div>
+              <div className='why-us__card--image'>
+                <Image src={connectionIcon} alt='Selection' fill />
+              </div>
+              <p className='why-us__card--title'>CONNECTION</p>
+              <p className='why-us__card--text'>
+                Forge and maintain mutually beneficial and strong relationships
+                with vendor partners.
+              </p>
             </div>
           </div>
         </section>
       </article>
-      <article id='contact-us' className='anchor'>
-        <section className='container mx-auto contact'>
-          <div className='contact__title'>
-            <h2>
-              <span>Contact</span> us
-            </h2>
-            <p>
-              Together we’ll create and refine your plan for success. We didn’t
-              get there alone. And neither will you.
-            </p>
-            <div className='contact__title--image'>
-              <Image src={circleTitle} alt='circle' fill />
+      <article id='contact-us' className='contact-container anchor'>
+        <section className='container mx-auto contact row'>
+          <div className='col-12 col-lg-6'>
+            <h2>CONTACT US</h2>
+            <h3>TOGETHER WE’LL CREATE AND REFINE YOUR PLAN FOR SUCCESS.</h3>
+            <p>We didn’t get there alone and neither will you.</p>
+            <div className='contact__options justify-content-left justify-content-lg-start flex-column flex-sm-row'>
+              <div className=''>
+                <Link
+                  href={'/company'}
+                  scroll={false}
+                  className='btn text-uppercase red'
+                >
+                  I'M A COMPANY
+                </Link>
+              </div>
+              <div className=''>
+                <Link href={'/apply'} className='btn text-uppercase blue'>
+                  I'M A WORKER
+                </Link>
+              </div>
             </div>
           </div>
-          <form className='col-12 col-lg-7 col-xl-6 mx-auto contact__form'>
-            <div className='form-floating mb-3'>
-              <input
-                type='text'
-                className='form-control'
-                id='name'
-                placeholder='Name'
-                required
-              />
-              <label htmlFor='name'>Name</label>
-            </div>
-            <div className='form-floating mb-3'>
-              <input
-                type='text'
-                className='form-control'
-                id='organization'
-                placeholder='Organization name'
-                required
-              />
-              <label htmlFor='organization'>Organization name</label>
-            </div>
-            <div className='form-floating mb-3'>
-              <input
-                type='email'
-                className='form-control'
-                id='email'
-                placeholder='Email'
-                required
-              />
-              <label htmlFor='email'>Email</label>
-            </div>
-            <div className='form-floating'>
-              <textarea
-                className='form-control'
-                placeholder='Leave a comment here'
-                id='message'
-                required
-              ></textarea>
-              <label htmlFor='message'>Message</label>
-            </div>
-            <button type='submit' className='btn contact__form--button'>
-              SEND
-            </button>
-          </form>
+          <div className='col-12 col-lg-6 d-none d-lg-block'>IMAGEN</div>
         </section>
       </article>
       <Footer />

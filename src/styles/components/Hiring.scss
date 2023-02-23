@@ -2,98 +2,105 @@
 @import '@styles/base/mixins';
 
 .hiring-container {
-  background: rgb(241, 242, 246);
-  background: radial-gradient(
-    circle,
-    rgba(241, 242, 246, 1) 0%,
-    rgba(235, 236, 240, 1) 100%
-  );
-}
-
-.hiring {
-  $parent: &;
-  padding-top: 60px;
-  &__title {
+  margin: 100px 0;
+  h2 {
+    font-family: '__Bebas_Neue_a0fe44';
+    font-size: map-get($font-size, 'lg');
+    text-align: center;
     position: relative;
-    h2 {
-      text-align: center;
-      position: relative;
-      z-index: 5;
-      span {
-        color: map-get($colors, 'blue-dark');
-      }
+    color: map-get($colors, 'red-wine');
+    font-weight: 400;
+    @include mq-xs {
+      font-size: 3rem;
     }
-    &--image {
+    &:before {
+      content: '';
+      border: 12px solid map-get($colors, 'black-principal');
       position: absolute;
-      width: 100px;
-      height: 100px;
-      left: 39%;
-      z-index: 1;
-      top: -15px;
-      @include mq-xl {
-        left: 37%;
-      }
-      @include mq-lg {
-        left: 34%;
-      }
-      @include mq-md {
-        left: 29%;
-      }
-      @include mq-sm {
-        left: 22%;
-      }
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: calc(50vw - 165px);
       @include mq-xs {
         display: none;
       }
     }
   }
+}
 
-  &__image {
-    position: relative;
-    width: 280px;
-    height: 500px;
-    margin: auto;
-  }
-  &__content {
-    @include mq-md {
-      margin: 55px 0;
+.hiring {
+  $parent: &;
+  &__card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 14px;
+    color: #fff;
+    padding: 30px 5px;
+    margin-top: 20px;
+    &.red {
+      background-color: map-get($colors, 'red-wine');
     }
-  }
-  &__item {
-    border: 1px solid map-get($colors, 'blue-dark');
-    border-radius: 16px;
-    max-width: 295px;
-    text-align: center;
-    @include mq-xl {
-      max-width: none;
-    }
-    @include mq-md {
-      margin: 10px auto;
-      max-width: 320px;
-    }
-    &--title {
-      font-weight: 700;
-      text-align: center;
-      color: map-get($colors, 'blue-dark');
-      font-size: 1.2rem;
-      padding: 40px 0 20px 0;
-    }
-    &--ul {
-      list-style: none;
-    }
-    &--li {
-      display: flex;
-      gap: 20px;
+    &.blue {
+      background-color: map-get($colors, 'blue-dark');
     }
     &--image {
+      width: 90px;
+      height: 90px;
       position: relative;
-      width: 22px;
-      height: 22px;
+      text-align: center;
+    }
+    &--title {
+      font-family: '__Bebas_Neue_a0fe44';
+      font-size: map-get($font-size, 'md');
+    }
+    &--list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      line-height: 2;
     }
     &--button {
-      color: map-get($colors, 'blue-dark');
-      text-decoration: underline;
-      margin-bottom: 40px;
+      border-radius: 12px;
+      background-color: #fff;
+      border: 1px solid map-get($colors, 'dark-principal');
+      padding: 13px 35px;
+      transition: 0.2s all;
+      &:hover {
+        color: #fff;
+        background-color: map-get($colors, 'blue-dark-hover');
+      }
+    }
+  }
+}
+
+.improve {
+  margin: 150px auto;
+  h3 {
+    position: relative;
+    font-size: 1.9rem;
+    text-align: center;
+    span {
+      font-weight: 600;
+    }
+    &::before {
+      content: '';
+      border: 4px solid map-get($colors, 'black-principal');
+      position: absolute;
+      top: -60px;
+      transform: translateX(-50%);
+      left: 50%;
+      width: 80%;
+    }
+    &::after {
+      content: '';
+      border: 4px solid map-get($colors, 'black-principal');
+      position: absolute;
+      bottom: -60px;
+      transform: translateX(-50%);
+      left: 50%;
+      width: 80%;
     }
   }
 }

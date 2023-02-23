@@ -1,18 +1,6 @@
 @import '@styles/base/variables';
 @import '@styles/base/mixins';
 
-.presentation-content {
-  background-color: map-get($colors, 'red-wine');
-  clip-path: polygon(0 0, 100% 0, 100% 96%, 0% 100%);
-  position: relative;
-  @include mq-lg {
-    clip-path: polygon(0 0, 100% 0, 100% 98%, 0% 100%);
-  }
-  @include mq-sm {
-    clip-path: polygon(0 0, 100% 0, 100% 98.5%, 0% 100%);
-  }
-}
-
 .presentation {
   $parent: &;
   min-height: calc(80vh - 90px);
@@ -23,16 +11,15 @@
   color: #fff;
   h1 {
     margin-bottom: 35px;
-    span {
-      color: map-get($colors, 'red-wine-light');
+    color: map-get($colors, 'black-principal');
+    font-family: '__Bebas_Neue_a0fe44';
+    font-size: map-get($font-size, 'xl');
+    @include mq-xs {
+      font-size: 3rem;
     }
   }
   p {
-    color: map-get($colors, 'red-wine-text');
-    small {
-      font-size: map-get($font-size, 'xs');
-      color: map-get($colors, 'red-wine-text');
-    }
+    color: map-get($colors, 'red-wine');
   }
   &__options {
     display: flex;
@@ -43,30 +30,28 @@
       margin-top: 0;
     }
     a {
-      border: 1px solid #fff;
-      border-radius: 50px;
-      font-weight: 600;
-      padding: 13px 0;
-      width: 200px;
-      &:hover {
-        color: map-get($colors, 'red-wine') !important;
-        background-color: #fff;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+      border-radius: 11px;
+      padding: 13px 35px;
+      color: #fff;
+      &.red {
+        background-color: map-get($colors, 'red-wine');
+        &:hover {
+          color: #fff;
+          background-color: map-get($colors, 'red-wine-hover');
+          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        }
       }
-      &:active {
-        background-color: #fff;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+      &.blue {
+        background-color: map-get($colors, 'blue-dark');
+        &:hover {
+          color: #fff;
+          background-color: map-get($colors, 'blue-dark-hover');
+          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        }
       }
+
       @include mq-xs {
         width: 85%;
-      }
-    }
-    &--principal {
-      background-color: #f6f6f6;
-      color: map-get($colors, 'red-wine');
-      &:hover {
-        background-color: #fff;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
       }
     }
   }
@@ -85,174 +70,6 @@
       @include mq-md {
         width: 300px;
         height: 300px;
-      }
-    }
-
-    &--points {
-      position: absolute;
-      width: 185px;
-      height: 370px;
-      top: 20px;
-      right: -40px;
-      z-index: 2;
-      @include mq-md {
-        width: 155px;
-        height: 300px;
-        right: 90px;
-      }
-      @include mq-sm {
-        width: 155px;
-        height: 300px;
-        right: 50px;
-      }
-    }
-  }
-}
-
-.why-us {
-  $parent: &;
-  text-align: center;
-  padding: 90px 12px;
-  color: #fff;
-  h2 {
-    color: #fff;
-    padding-bottom: 5px;
-    span {
-      color: map-get($colors, 'red-wine-light');
-    }
-  }
-  &__box {
-    padding: 0 30px;
-    margin-top: 30px;
-    p {
-      color: map-get($colors, 'red-wine-text');
-      padding-top: 10px;
-    }
-    &--content {
-      display: flex;
-      background: rgb(86, 38, 36);
-      background: linear-gradient(
-        175deg,
-        rgba(86, 38, 36, 1) 0%,
-        rgba(134, 69, 66, 1) 100%
-      );
-      width: 75px;
-      height: 75px;
-      border-radius: 50px;
-      margin: auto;
-    }
-    &--image {
-      border-radius: 50px;
-      margin: auto;
-      position: relative;
-
-      width: 50px;
-      height: 50px;
-    }
-  }
-}
-
-.what-we-do {
-  $parent: &;
-  padding: 80px 20px 0 20px;
-  &__title {
-    position: relative;
-    h2 {
-      position: relative;
-      z-index: 5;
-      span {
-        color: map-get($colors, 'blue-dark');
-      }
-    }
-    &--image {
-      position: absolute;
-      width: 100px;
-      height: 100px;
-      left: 45%;
-      transform: translateX(-50%);
-      z-index: 1;
-      top: -22px;
-      @include mq-lg {
-        left: 43%;
-      }
-      @include mq-md {
-        left: 41%;
-      }
-      @include mq-sm {
-        left: 38%;
-      }
-      @include mq-xs {
-        display: none;
-      }
-    }
-  }
-}
-
-.help-your-business {
-  $parent: &;
-  margin: 100px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  &__item {
-    border: 1px solid #cecece;
-    border-radius: 7px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    min-height: 140px;
-    padding: 0 12px;
-    @include mq-lg {
-      min-height: 180px;
-    }
-    @include mq-xs {
-      min-height: 135px;
-    }
-    &--image {
-      position: relative;
-      width: 27px;
-      height: 21px;
-      margin: 10px;
-    }
-  }
-  &__title {
-    position: relative;
-    h1 {
-      text-align: right;
-      position: relative;
-      z-index: 5;
-      @include mq-md {
-        font-size: 1.9rem;
-        text-align: center;
-        margin-bottom: 50px;
-      }
-      span {
-        color: map-get($colors, 'blue-dark');
-      }
-    }
-    &--image {
-      position: absolute;
-      width: 100px;
-      height: 100px;
-      left: 30px;
-      z-index: 1;
-      top: -15px;
-      @include mq-xl {
-        left: 55px;
-      }
-      @include mq-lg {
-        left: -5px;
-      }
-      @include mq-md {
-        left: 8%;
-      }
-      @include mq-sm {
-        left: 2%;
-      }
-      @include mq-xs {
-        display: none;
       }
     }
   }

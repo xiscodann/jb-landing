@@ -1,11 +1,11 @@
 @import '@styles/base/variables';
 @import '@styles/base/mixins';
 
-.apply-content {
-  background-color: map-get($colors, 'blue-dark');
+.company-content {
+  background-color: map-get($colors, 'red-wine');
 }
 
-.apply {
+.company {
   $parent: &;
   height: calc(80vh - 90px);
   padding-top: 125px;
@@ -27,24 +27,20 @@
       font-size: 3rem;
     }
   }
-  &__form {
-    input {
-      padding: 13px;
-    }
-    button {
-      background-color: map-get($colors, 'red-wine');
-      color: #fff;
-      padding: 13px 35px;
-      border: 1px solid map-get($colors, 'red-wine');
-      &:hover {
-        background-color: map-get($colors, 'red-wine-hover');
-        color: #fff;
-      }
+  a {
+    background-color: #fff;
+    color: map-get($colors, 'red-wine');
+    padding: 13px 35px;
+    font-weight: 600;
+    &:hover {
+      background-color: #fff;
+      color: map-get($colors, 'red-wine');
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
     }
   }
 }
 
-.we-help-you {
+.help-your-business {
   $parent: &;
   $left-spacing: 100px;
   padding-bottom: 90px;
@@ -83,12 +79,15 @@
   &__explain {
     margin-top: 20px;
     .card {
-      background-color: map-get($colors, 'red-wine');
+      background-color: map-get($colors, 'blue-dark');
       display: grid;
       place-items: center;
       min-height: 150px;
       font-size: 1rem;
       text-align: center;
+      @include mq-sm {
+        min-height: 177px;
+      }
       .small {
         padding: 0 100px;
         font-size: 1rem;
@@ -100,20 +99,7 @@
   }
 }
 
-.create-and-refine {
-  font-family: '__Bebas_Neue_a0fe44';
-  font-size: map-get($font-size, 'md');
-  line-height: 1.2;
-  text-align: center;
-  border: 3px solid map-get($colors, 'blue-dark');
-  border-radius: 12px;
-  padding: 20px 40px;
-  p {
-    margin: 0;
-  }
-}
-
-.list-content {
+.list-services {
   $parent: &;
   &__separator {
     border: 4px solid map-get($colors, 'black-principal');
@@ -121,5 +107,42 @@
     width: 80%;
     display: block;
     margin: 70px auto;
+  }
+}
+
+.contact-form {
+  $parent: &;
+  border: 2px solid map-get($colors, 'blue-dark');
+  border-radius: 12px;
+  padding: 8%;
+  margin: 80px 0;
+  scroll-margin: 90px;
+  h3 {
+    font-family: '__Bebas_Neue_a0fe44';
+    font-weight: 400;
+    font-size: map-get($font-size, 'lg');
+    color: map-get($colors, 'red-wine');
+    @include mq-xs {
+      font-size: 3rem;
+    }
+  }
+  h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  form {
+    margin-top: 60px;
+    button {
+      background-color: map-get($colors, 'blue-dark');
+      color: #fff;
+      border-radius: 50px;
+      padding: 12px 70px;
+      margin-top: 40px;
+      &:hover {
+        background-color: map-get($colors, 'blue-light');
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        color: #fff;
+      }
+    }
   }
 }

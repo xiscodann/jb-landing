@@ -1,0 +1,94 @@
+@import '@styles/base/variables';
+@import '@styles/base/mixins';
+
+.why-us-container {
+  margin: 115px auto 90px auto;
+  h2 {
+    font-family: '__Bebas_Neue_a0fe44';
+    font-size: map-get($font-size, 'lg');
+    text-align: center;
+    position: relative;
+    color: map-get($colors, 'red-wine');
+    font-weight: 400;
+    @include mq-xs {
+      font-size: 3rem;
+    }
+    &:before {
+      content: '';
+      border: 12px solid map-get($colors, 'black-principal');
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      width: calc(50vw - 165px);
+      @include mq-xs {
+        display: none;
+      }
+    }
+  }
+}
+
+.why-us {
+  $parent: &;
+  &__card {
+    text-align: center;
+    margin-top: 30px;
+    &--image {
+      width: 100px;
+      height: 100px;
+      position: relative;
+      margin: auto;
+      background-color: #fff;
+      border-radius: 50%;
+      border: 8px solid #fff;
+    }
+    &--title {
+      font-family: '__Bebas_Neue_a0fe44';
+      font-size: map-get($font-size, 'md');
+      padding-top: 10px;
+    }
+    &:nth-child(1) {
+      position: relative;
+      &::before {
+        content: '';
+        border: 2px solid map-get($colors, 'red-wine');
+        position: absolute;
+        top: 40px;
+        right: 0;
+        width: 50%;
+        @include mq-sm {
+          display: none;
+        }
+      }
+    }
+    &:nth-child(2) {
+      position: relative;
+      &::before {
+        content: '';
+        border: 2px solid map-get($colors, 'red-wine');
+        position: absolute;
+        top: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        @include mq-sm {
+          display: none;
+        }
+      }
+    }
+    &:nth-child(3) {
+      position: relative;
+      &::before {
+        content: '';
+        border: 2px solid map-get($colors, 'red-wine');
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: 50%;
+        @include mq-sm {
+          display: none;
+        }
+      }
+    }
+  }
+}

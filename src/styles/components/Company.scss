@@ -13,7 +13,9 @@
   align-items: center;
   color: #fff;
   text-align: left;
+  position: relative;
   min-height: 700px;
+  z-index: 5;
   @include mq-xs {
     text-align: center;
   }
@@ -36,6 +38,21 @@
       background-color: #fff;
       color: map-get($colors, 'red-wine');
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    }
+  }
+  &__image {
+    position: absolute;
+    height: 102%;
+    width: 100%;
+    min-width: 360px;
+    min-height: 700px;
+    max-height: calc(80vh - 90px);
+    z-index: 0;
+    @include mq-sm {
+      filter: brightness(0.5);
+    }
+    img {
+      object-fit: cover;
     }
   }
 }

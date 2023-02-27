@@ -1,17 +1,15 @@
-import React from 'react';
 import Image from 'next/image';
 import Header from '@components/Header';
 import CarouselOfJobs from '@components/CarouselOfJobs';
-import Link from 'next/link';
 
-import decorPoint from '@images/decor-point.png';
-import iconCheck from '@icons/check.png';
+import companyImage from '@images/company-image.jpg';
 
 import Footer from '@components/Footer';
 
 const jobsEngineering = [
   {
     title: 'Automation/ Engineer Qualifications',
+    image: 'services-engineer-automation.jpg',
     subtitle:
       'Employees possess Automation, Robotics or Mechatronics Engineering degrees.',
     description: [
@@ -26,6 +24,7 @@ const jobsEngineering = [
   },
   {
     title: 'Industrial  Engineer Qualifications',
+    image: 'services-engineer-industrial.jpg',
     subtitle: 'Employees possess Industrial Engineering degrees.',
     description: [
       'Experience improving OEE by using visual management, visual metrics and LEAN systems.',
@@ -37,6 +36,7 @@ const jobsEngineering = [
   },
   {
     title: 'Mechanical Design Engineer',
+    image: 'services-engineer-mechanical.jpg',
     subtitle: 'Employees possess Mechanical or electrical engineering degrees.',
     description: [
       'Meet with designers and engineers to discuss design ideas',
@@ -51,6 +51,7 @@ const jobsEngineering = [
 const jobsTechnical = [
   {
     title: 'Reliability / Maintenance Technicians',
+    image: 'services-technical-reliability.jpg',
     subtitle:
       'Employees possess Mechanical and Electrical Engineering degrees.',
     description: [
@@ -66,6 +67,7 @@ const jobsTechnical = [
   },
   {
     title: 'Injection/Blow Molding Technicians',
+    image: 'services-technical-injection.jpg',
     subtitle:
       'Employees possess Mechanical and Electrical Engineering degrees.',
     description: [
@@ -78,6 +80,7 @@ const jobsTechnical = [
   },
   {
     title: 'Certified Welders',
+    image: 'services-technical-welders.jpg',
     subtitle: 'Employees with welding certifications from technical schools.',
     description: [
       'Reading and understanding blueprints prior to starting a project',
@@ -89,6 +92,7 @@ const jobsTechnical = [
   },
   {
     title: 'Certified HVAC',
+    image: 'services-technical-hvac.jpg',
     subtitle:
       'Employees with HVAC certifications from technical schools in Mexico.',
     description: [
@@ -106,6 +110,7 @@ const jobsTechnical = [
   },
   {
     title: 'Certified CNC Technicians',
+    image: 'services-technical-cnc.jpg',
     subtitle:
       'Employees with Mechanical and Electrical engineering degrees from technical schools in Mexico.',
     description: [
@@ -122,18 +127,17 @@ const Company = () => {
   return (
     <>
       <Header />
-      <article className='company-content px-2' id='company-content'>
+      <article className='company-content' id='company-content'>
+        <div className='company__image'>
+          <Image src={companyImage} alt='Company image' fill />
+        </div>
         <section className='company container mx-auto row'>
           <div className='col-12 col-sm-10 col-md-8 col-lg-6'>
             <h1>FIND YOUR TECHNICAL TALENT WITH JOE BAR BUSINESS</h1>
-            <div className='w-100 text-center'>
+            <div className='w-100 text-center text-sm-start'>
               <a href='#contact' className='btn'>
                 CONTACT US
               </a>
-            </div>
-
-            <div className='company__image--points'>
-              {/*<Image src={decorPoint} alt='apply image' fill />*/}
             </div>
           </div>
         </section>
@@ -211,7 +215,7 @@ const Company = () => {
         </section>
       </article>
       <article id='contact' className='px-2 px-md-0 anchor'>
-        <section className='container contact-form mx-auto'>
+        <section className='container col-12 col-lg-8 contact-form mx-auto'>
           <h3>CONTACT US</h3>
           <h4>INNOVATIVE SOLUTIONS FOR YOUR BUSINESS</h4>
           <form className='col-12 mx-auto contact__form--form'>

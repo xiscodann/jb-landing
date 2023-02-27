@@ -20,7 +20,7 @@
       top: 50%;
       transform: translateY(-50%);
       right: 0;
-      width: calc(50vw - 165px);
+      width: calc(50vw - 120px);
       @include mq-xs {
         display: none;
       }

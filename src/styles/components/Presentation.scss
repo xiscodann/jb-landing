@@ -7,10 +7,11 @@
   padding-top: 125px;
   display: flex;
   align-items: center;
-  justify-content: center;
   color: #fff;
+  position: relative;
+  z-index: 5;
   h1 {
-    margin-bottom: 35px;
+    margin-bottom: 10px;
     color: map-get($colors, 'black-principal');
     font-family: '__Bebas_Neue_a0fe44';
     font-size: map-get($font-size, 'xl');
@@ -20,6 +21,14 @@
   }
   p {
     color: map-get($colors, 'red-wine');
+  }
+  &__info {
+    background-color: rgba(255, 255, 255, 0.85);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 500px;
+    border-radius: 12px;
   }
   &__options {
     display: flex;
@@ -56,21 +65,15 @@
     }
   }
   &__image {
-    position: relative;
-    &--photo {
-      position: relative;
-      margin: auto;
-      width: 480px;
-      height: 480px;
-      z-index: 5;
-      @include mq-lg {
-        width: 400px;
-        height: 400px;
-      }
-      @include mq-md {
-        width: 300px;
-        height: 300px;
-      }
+    position: absolute;
+    height: 102%;
+    width: 100%;
+    min-width: 360px;
+    max-height: calc(80vh - 10px);
+    min-height: 700px;
+    z-index: 0;
+    img {
+      object-fit: cover;
     }
   }
 }

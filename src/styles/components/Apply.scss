@@ -13,7 +13,9 @@
   align-items: center;
   color: #fff;
   text-align: left;
+  position: relative;
   min-height: 700px;
+  z-index: 5;
   @include mq-xs {
     text-align: center;
   }
@@ -27,19 +29,28 @@
       font-size: 3rem;
     }
   }
-  &__form {
-    input {
-      padding: 13px;
+  &__image {
+    position: absolute;
+    height: 102%;
+    width: 100%;
+    min-width: 360px;
+    min-height: 700px;
+    max-height: calc(80vh - 90px);
+    z-index: 0;
+    @include mq-sm {
+      filter: brightness(0.5);
     }
-    button {
-      background-color: map-get($colors, 'red-wine');
+    img {
+      object-fit: cover;
+    }
+  }
+  &__button {
+    background-color: #fff;
+    color: map-get($colors, 'blue-dark');
+    padding: 13px 35px;
+    &:hover {
+      background-color: map-get($colors, 'red-wine-hover');
       color: #fff;
-      padding: 13px 35px;
-      border: 1px solid map-get($colors, 'red-wine');
-      &:hover {
-        background-color: map-get($colors, 'red-wine-hover');
-        color: #fff;
-      }
     }
   }
 }
@@ -121,5 +132,38 @@
     width: 80%;
     display: block;
     margin: 70px auto;
+  }
+}
+
+.apply-form {
+  $parent: &;
+  border: 2px solid map-get($colors, 'blue-dark');
+  border-radius: 12px;
+  padding: 8%;
+  margin: 80px 0;
+  scroll-margin: 90px;
+  h3 {
+    font-family: '__Bebas_Neue_a0fe44';
+    font-weight: 400;
+    font-size: map-get($font-size, 'lg');
+    color: map-get($colors, 'red-wine');
+    @include mq-xs {
+      font-size: 3rem;
+    }
+  }
+  form {
+    margin-top: 60px;
+    button {
+      background-color: map-get($colors, 'blue-dark');
+      color: #fff;
+      border-radius: 50px;
+      padding: 12px 70px;
+      margin-top: 40px;
+      &:hover {
+        background-color: map-get($colors, 'blue-light');
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        color: #fff;
+      }
+    }
   }
 }

@@ -60,13 +60,19 @@ const CarouselOfJobs = ({ data, type, isApplyJob }) => {
         interval={null}
         indicators={false}
       >
-        {data.map(({ title, subtitle, description }, i) => (
+        {data.map(({ title, subtitle, description, image }, i) => (
           <Carousel.Item key={i} className='carousel-jobs__item'>
             <div className='row'>
-              <div className='col-12 col-md-6 col-lg-5'>
-                <p>Image</p>
+              <div className='col-12 col-md-6 col-lg-5 carousel-jobs__item--image'>
+                {image ? (
+                  <Image
+                    src={image ? require(`../assets/images/${image}`) : ''}
+                    alt='Company image'
+                    fill
+                  />
+                ) : null}
               </div>
-              <div className='col-12 col-md-6 offset-lg-1'>
+              <div className='col-12 col-lg-6 offset-lg-1'>
                 <div className='carousel-jobs__item--subtitle'>
                   <h3>{title}</h3>
                   <p className='m-0'>{subtitle}</p>
@@ -81,7 +87,7 @@ const CarouselOfJobs = ({ data, type, isApplyJob }) => {
                   {typeof description === 'object'
                     ? description.map((item, i) => (
                         <div key={i} className='carousel-jobs__item--content'>
-                          <div className='carousel-jobs__item--image'>
+                          <div className='carousel-jobs__item--check'>
                             <Image src={iconCheck2} alt='Check icon' fill />
                           </div>
                           <p>{item}</p>

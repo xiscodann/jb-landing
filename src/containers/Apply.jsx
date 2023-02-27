@@ -1,17 +1,15 @@
-import React from 'react';
 import Image from 'next/image';
 import Header from '@components/Header';
 import CarouselOfJobs from '@components/CarouselOfJobs';
-import Link from 'next/link';
 
-import decorPoint from '@images/decor-point.png';
-import iconCheck from '@icons/check.png';
+import applyImage from '@images/apply-image.jpg';
 
 import Footer from '@components/Footer';
 
 const jobsEngineering = [
   {
     title: 'Automation/ Engineer Qualifications',
+    image: 'services-engineer-automation.jpg',
     subtitle:
       'Employees possess Automation, Robotics or Mechatronics Engineering degrees.',
     description: [
@@ -26,6 +24,7 @@ const jobsEngineering = [
   },
   {
     title: 'Industrial  Engineer Qualifications',
+    image: 'services-engineer-industrial.jpg',
     subtitle: 'Employees possess Industrial Engineering degrees.',
     description: [
       'Experience improving OEE by using visual management, visual metrics and LEAN systems.',
@@ -37,6 +36,7 @@ const jobsEngineering = [
   },
   {
     title: 'Mechanical Design Engineer',
+    image: 'services-engineer-mechanical.jpg',
     subtitle: 'Employees possess Mechanical or electrical engineering degrees.',
     description: [
       'Meet with designers and engineers to discuss design ideas',
@@ -51,6 +51,7 @@ const jobsEngineering = [
 const jobsTechnical = [
   {
     title: 'Reliability / Maintenance Technicians',
+    image: 'services-technical-reliability.jpg',
     subtitle:
       'Employees possess Mechanical and Electrical Engineering degrees.',
     description: [
@@ -66,6 +67,7 @@ const jobsTechnical = [
   },
   {
     title: 'Injection/Blow Molding Technicians',
+    image: 'services-technical-injection.jpg',
     subtitle:
       'Employees possess Mechanical and Electrical Engineering degrees.',
     description: [
@@ -78,6 +80,7 @@ const jobsTechnical = [
   },
   {
     title: 'Certified Welders',
+    image: 'services-technical-welders.jpg',
     subtitle: 'Employees with welding certifications from technical schools.',
     description: [
       'Reading and understanding blueprints prior to starting a project',
@@ -89,6 +92,7 @@ const jobsTechnical = [
   },
   {
     title: 'Certified HVAC',
+    image: 'services-technical-hvac.jpg',
     subtitle:
       'Employees with HVAC certifications from technical schools in Mexico.',
     description: [
@@ -106,6 +110,7 @@ const jobsTechnical = [
   },
   {
     title: 'Certified CNC Technicians',
+    image: 'services-technical-cnc.jpg',
     subtitle:
       'Employees with Mechanical and Electrical engineering degrees from technical schools in Mexico.',
     description: [
@@ -123,31 +128,15 @@ const Apply = () => {
     <>
       <Header />
       <article className='apply-content' id='apply-content'>
+        <div className='apply__image'>
+          <Image src={applyImage} alt='Apply image' fill />
+        </div>
         <section className='apply container mx-auto row'>
           <div className='col-12 col-sm-10 col-md-8 col-lg-6'>
             <h1>Apply for a job with Joe Bar Business</h1>
-            <form className='apply__form'>
-              <div className='input-group mb-3'>
-                <input
-                  type='text'
-                  className='form-control'
-                  placeholder='Your email'
-                  aria-label="Recipient's username"
-                  aria-describedby='button-addon2'
-                  required
-                />
-                <button
-                  className='btn btn-outline-secondary'
-                  type='submit'
-                  id='button-addon2'
-                >
-                  Apply
-                </button>
-              </div>
-            </form>
-            <div className='apply__image--points'>
-              {/*<Image src={decorPoint} alt='apply image' fill />*/}
-            </div>
+            <a href='#job' className='btn apply__button'>
+              SEND MY CV
+            </a>
           </div>
         </section>
       </article>
@@ -225,6 +214,39 @@ const Apply = () => {
         <span className='list-content__separator'></span>
         <section className='container list anchor' id='technical'>
           <CarouselOfJobs data={jobsTechnical} type='technical' isApplyJob />
+        </section>
+      </article>
+      <article id='job' className='px-2 px-md-0 anchor'>
+        <section className='container col-12 col-lg-8 contact-form mx-auto'>
+          <h3>JOB APPLICATION</h3>
+          <p>Just send us your CV and we will contact you</p>
+          <form className='col-12 mx-auto contact__form--form'>
+            <div className='form-floating mb-3'>
+              <input
+                type='text'
+                className='form-control'
+                id='name'
+                placeholder='Name'
+                required
+              />
+              <label htmlFor='name'>Name</label>
+            </div>
+            <div className='form-floating mb-3'>
+              <input
+                type='email'
+                className='form-control'
+                id='email'
+                placeholder='Email'
+                required
+              />
+              <label htmlFor='email'>Email</label>
+            </div>
+            <div className='text-center'>
+              <button type='submit' className='btn'>
+                SEND
+              </button>
+            </div>
+          </form>
         </section>
       </article>
       <Footer />

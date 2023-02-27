@@ -1,19 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
 import Header from '@components/Header';
-import CarouselOfJobs from '@components/CarouselOfJobs';
 import Footer from '@components/Footer';
 import Link from 'next/link';
 
-import presentationImage from '@images/presentation-image.png';
-import hiringImage from '@images/hiring-image.png';
-import decorPoint from '@images/decor-point.png';
-import iconPresentation1 from '@icons/presentation-icon-1.svg';
-import iconPresentation2 from '@icons/presentation-icon-2.svg';
-import iconPresentation3 from '@icons/presentation-icon-3.svg';
-import iconCheck from '@icons/check.png';
-import iconCheck2 from '@icons/check-2.png';
-import circleTitle from '@images/circle.png';
+import presentationImage from '@images/presentation-image.jpg';
+import operationalExcellenceImage from '@images/what-we-do.jpg';
+import contactUsImage from '@images/contact-us.png';
 
 import engineeringIcon from '@icons/engineering.svg';
 import technicalIcon from '@icons/technical.svg';
@@ -57,8 +50,11 @@ const Layout = () => {
     <>
       <Header />
       <article className='presentation-content' id='presentation-article'>
+        <div className='presentation__image'>
+          <Image src={presentationImage} alt='presentation image' fill />
+        </div>
         <section className='presentation container mx-auto row'>
-          <div className='col-12 col-lg-6 order-2 order-lg-1 text-center text-lg-start pt-4 pt-lg-0'>
+          <div className='presentation__info col-12 col-lg-6 order-2 order-lg-1 text-center text-lg-start pt-4 pt-lg-0'>
             <h1>FIND THE BEST TECHNICAL TALENT FOR YOUR BUSINESS</h1>
             <p>
               We are experts at finding international talent for full time
@@ -71,19 +67,14 @@ const Layout = () => {
                   scroll={false}
                   className='btn text-uppercase red'
                 >
-                  I&#39;M A COMPANY
+                  FIND A TALENT
                 </Link>
               </div>
               <div>
                 <Link href={'/apply'} className='btn text-uppercase blue'>
-                  I&#39;M A WORKER
+                  FIND A JOB
                 </Link>
               </div>
-            </div>
-          </div>
-          <div className='col-12 col-lg-6 presentation__image order-1 order-lg-2'>
-            <div className='presentation__image--photo'>
-              <Image src={presentationImage} alt='presentation image' fill />
             </div>
           </div>
         </section>
@@ -103,7 +94,13 @@ const Layout = () => {
           id='what-we-do'
         >
           <div className='col-12 col-lg-6 col-md-5'>
-            <p>OPERATIONAL EXCELLENCE</p>
+            <div className='what-we-do__image d-none d-md-block'>
+              <Image
+                src={operationalExcellenceImage}
+                alt='Operational Excellence'
+                fill
+              />
+            </div>
           </div>
           <div className='col-12 col-lg-6 col-md-7 what-we-do__info'>
             <h4>WHAT WE DO</h4>
@@ -171,7 +168,7 @@ const Layout = () => {
       <article className='why-us-container'>
         <h2>WHY US?</h2>
         <section className='container mx-auto why-us row'>
-          <div className='col-12 col-lg-4 why-us__card'>
+          <div className='col-12 col-md-4 why-us__card'>
             <div>
               <div className='why-us__card--image'>
                 <Image src={selectionIcon} alt='Selection' fill />
@@ -212,7 +209,7 @@ const Layout = () => {
       </article>
       <article id='contact-us' className='contact-container anchor'>
         <section className='container mx-auto contact row'>
-          <div className='col-12 col-lg-6'>
+          <div className='col-12 col-lg-6 d-flex flex-column justify-content-center'>
             <h2>CONTACT US</h2>
             <h3>
               TOGETHER WE&apos;LL CREATE AND REFINE YOUR PLAN FOR SUCCESS.
@@ -225,17 +222,21 @@ const Layout = () => {
                   scroll={false}
                   className='btn text-uppercase red'
                 >
-                  I&#39;M A COMPANY
+                  FIND A TALENT
                 </Link>
               </div>
               <div className=''>
                 <Link href={'/apply'} className='btn text-uppercase blue'>
-                  I&#39;M A WORKER
+                  FIND A JOB
                 </Link>
               </div>
             </div>
           </div>
-          <div className='col-12 col-lg-6 d-none d-lg-block'>IMAGEN</div>
+          <div className='col-12 col-lg-6 d-none d-lg-block'>
+            <div className='contact__image'>
+              <Image src={contactUsImage} alt='Contact Us' fill />
+            </div>
+          </div>
         </section>
       </article>
       <Footer />

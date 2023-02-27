@@ -3,7 +3,6 @@
 
 .header {
   $parent: &;
-  padding: 20px 0 0 0;
   position: fixed;
   width: 100%;
   z-index: 100;
@@ -11,6 +10,11 @@
   backdrop-filter: blur(8px);
   background-color: rgb(255 255 255 / 80%);
   box-shadow: 0 4px 16px rgb(0 0 0 / 5%);
+  &__logo {
+    img {
+      height: 60px;
+    }
+  }
   &__menu {
     @include mq-sm {
       gap: 35px;

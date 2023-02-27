@@ -15,11 +15,11 @@ footer {
   &__logo {
     position: relative;
     width: 228px;
-    height: 75px;
+    height: 77px;
     margin: auto;
     @include mq-lg {
       width: 170px;
-      height: 42px;
+      height: 57px;
     }
   }
   &__item {

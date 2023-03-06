@@ -40,15 +40,15 @@ const Header = () => {
           <Navbar.Collapse id='responsive-navbar-nav' isOpen={isOpen}>
             <Nav className={`ms-auto header__menu d-flex align-items-center`}>
               <Link
-                href={'/#what-we-do'}
+                href={'/#our-services'}
                 scroll={false}
                 onClick={() => setIsOpen(false)}
               >
                 Our services
               </Link>
-              <Link href={'/apply'} onClick={() => setIsOpen(false)}>
+              {/*<Link href={'/apply'} onClick={() => setIsOpen(false)}>
                 Apply for a job
-              </Link>
+  </Link>*/}
               <Link
                 href={'/#contact-us'}
                 scroll={false}

@@ -6,6 +6,10 @@ import applyImage from '@images/apply-image.jpg';
 
 import Footer from '@components/Footer';
 
+//TEMPORAL ROUTER
+import Router from 'next/router';
+import { useEffect } from 'react';
+
 const jobsEngineering = [
   {
     title: 'Automation/ Engineer Qualifications',
@@ -124,6 +128,10 @@ const jobsTechnical = [
 ];
 
 const Apply = () => {
+  // TEMPORAL ROUTER
+  useEffect(() => {
+    Router.replace('/');
+  }, []);
   return (
     <>
       <Header />

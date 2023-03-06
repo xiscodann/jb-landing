@@ -205,7 +205,7 @@ const Company = () => {
           </div>
         </section>
       </article>
-      <article className='list-services px-2'>
+      <article className='list-services px-2 anchor' id='jobs'>
         <section className='container list anchor' id='engineering'>
           <CarouselOfJobs data={jobsEngineering} type='engineering' />
         </section>

@@ -67,12 +67,7 @@ const Layout = () => {
                   scroll={false}
                   className='btn text-uppercase red'
                 >
-                  FIND A TALENT
-                </Link>
-              </div>
-              <div>
-                <Link href={'/apply'} className='btn text-uppercase blue'>
-                  FIND A JOB
+                  FIND TALENT
                 </Link>
               </div>
             </div>
@@ -89,10 +84,7 @@ const Layout = () => {
         </section>
       </article>
       <article>
-        <section
-          className='container text-center what-we-do anchor row mx-auto'
-          id='what-we-do'
-        >
+        <section className='container text-center what-we-do anchor row mx-auto'>
           <div className='col-12 col-lg-6 col-md-5'>
             <div className='what-we-do__image d-none d-md-block'>
               <Image
@@ -117,7 +109,7 @@ const Layout = () => {
           </div>
         </section>
       </article>
-      <article className='hiring-container'>
+      <article className='hiring-container anchor' id='our-services'>
         <h2>OUR SERVICES</h2>
         <section className='container row mx-auto hiring d-flex justify-content-center'>
           <div className='col-12 col-md-6 col-lg-5 col-xl-3'>
@@ -151,9 +143,13 @@ const Layout = () => {
             </div>
           </div>
           <div className='col-12 text-center mt-4'>
-            <a href='#contact-us' className='btn hiring__card--button'>
-              CONTACT US
-            </a>
+            <Link
+              href={'/company#jobs'}
+              scroll={false}
+              className='btn hiring__card--button'
+            >
+              MORE INFO
+            </Link>
           </div>
         </section>
         <section className='container col-12 col-lg-9 col-xl-8 improve'>
@@ -222,12 +218,7 @@ const Layout = () => {
                   scroll={false}
                   className='btn text-uppercase red'
                 >
-                  FIND A TALENT
-                </Link>
-              </div>
-              <div className=''>
-                <Link href={'/apply'} className='btn text-uppercase blue'>
-                  FIND A JOB
+                  FIND TALENT
                 </Link>
               </div>
             </div>

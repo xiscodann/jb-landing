@@ -84,7 +84,10 @@ const Layout = () => {
         </section>
       </article>
       <article>
-        <section className='container text-center what-we-do anchor row mx-auto'>
+        <section
+          className='container text-center what-we-do anchor row mx-auto'
+          data-aos='fade-up'
+        >
           <div className='col-12 col-lg-6 col-md-5'>
             <div className='what-we-do__image d-none d-md-block'>
               <Image
@@ -109,7 +112,11 @@ const Layout = () => {
           </div>
         </section>
       </article>
-      <article className='hiring-container anchor' id='our-services'>
+      <article
+        className='hiring-container anchor'
+        id='our-services'
+        data-aos='fade-right'
+      >
         <h2>OUR SERVICES</h2>
         <section className='container row mx-auto hiring d-flex justify-content-center'>
           <div className='col-12 col-md-6 col-lg-5 col-xl-3'>
@@ -161,7 +168,7 @@ const Layout = () => {
           </h3>
         </section>
       </article>
-      <article className='why-us-container'>
+      <article className='why-us-container' data-aos='fade-left'>
         <h2>WHY US?</h2>
         <section className='container mx-auto why-us row'>
           <div className='col-12 col-md-4 why-us__card'>
@@ -203,7 +210,11 @@ const Layout = () => {
           </div>
         </section>
       </article>
-      <article id='contact-us' className='contact-container anchor'>
+      <article
+        id='contact-us'
+        className='contact-container anchor'
+        data-aos='fade-up'
+      >
         <section className='container mx-auto contact row'>
           <div className='col-12 col-lg-6 d-flex flex-column justify-content-center'>
             <h2>CONTACT US</h2>

@@ -123,6 +123,34 @@ const jobsTechnical = [
   },
 ];
 
+const benefits = [
+  {
+    icon: 'logistics',
+    description: 'We handle logistics; housing, transportation',
+  },
+  {
+    icon: 'solve',
+    description: 'Solve immediate and long-term talent needs',
+  },
+  {
+    icon: 'immigration',
+    description: 'We handle all the immigration process for the work visas',
+  },
+  {
+    icon: 'retention',
+    description: '98% employee retention',
+  },
+  {
+    icon: 'improve',
+    description:
+      'Improve safety, profits, and efficiencies with self motivated employees',
+  },
+  {
+    icon: 'relocation',
+    description: 'Save on relocation, payroll taxes, and more',
+  },
+];
+
 const Company = () => {
   return (
     <>
@@ -142,79 +170,48 @@ const Company = () => {
           </div>
         </section>
       </article>
-      <article className='px-2'>
+      <article className='px-2' data-aos='fade-up'>
         <section className='container col-12 col-md-10 mx-auto help-your-business'>
           <div className='help-your-business__benefits'>
             <h4>BENEFITS</h4>
             <h3>HOW DO WE HELP YOUR BUSINESS?</h3>
           </div>
-          <div className='row help-your-business__explain g-4'>
-            <div className='col-6 col-md-3'>
-              <div className='card'>
-                <div className='card-body'>
-                  <p className='card-text'>
-                    We handle logistics; housing, transportation
-                  </p>
+          <div className='help-your-business__explain g-4'>
+            {benefits.map(({ icon, description }, index) => (
+              <div className='help-your-business__explain--card' key={index}>
+                <div className='help-your-business__explain--image'>
+                  <Image
+                    src={
+                      icon ? require(`../assets/icons/company-${icon}.png`) : ''
+                    }
+                    alt={`${icon}`}
+                    fill
+                  />
                 </div>
+                <p className='card-text'>{description}</p>
               </div>
-            </div>
-            <div className='col-6 col-md-3'>
-              <div className='card'>
-                <div className='card-body'>
-                  <p className='card-text'>
-                    Solve immediate and long-term talent needs
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className='col-6'>
-              <div className='card'>
-                <div className='card-body'>
-                  <p className='card-text small'>
-                    We handle all the immigration process for the work visas
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className='col-6 col-md-3'>
-              <div className='card'>
-                <div className='card-body'>
-                  <p className='card-text'>98% employee retention</p>
-                </div>
-              </div>
-            </div>
-            <div className='col-6'>
-              <div className='card'>
-                <div className='card-body'>
-                  <p className='card-text small'>
-                    Improve safety, profits, and efficiencies with self
-                    motivated employees
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className='col-6 col-md-3'>
-              <div className='card'>
-                <div className='card-body'>
-                  <p className='card-text'>
-                    Save on relocation, payroll taxes, and more
-                  </p>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </section>
       </article>
       <article className='list-services px-2 anchor' id='jobs'>
-        <section className='container list anchor' id='engineering'>
+        <section
+          className='container list anchor'
+          id='engineering'
+          data-aos='fade-up'
+        >
           <CarouselOfJobs data={jobsEngineering} type='engineering' />
         </section>
         <span className='list-services__separator'></span>
-        <section className='container list anchor' id='technical'>
+        <section
+          className='container list anchor'
+          id='technical'
+          data-aos='fade-up'
+        >
           <CarouselOfJobs data={jobsTechnical} type='technical' />
         </section>
       </article>
-      <article id='contact' className='px-2 px-md-0 anchor'>
+      <article id='contact' className='px-2 px-md-0 anchor' data-aos='fade-up'>
         <section className='container col-12 col-lg-8 contact-form mx-auto'>
           <h3>CONTACT US</h3>
           <h4>INNOVATIVE SOLUTIONS FOR YOUR BUSINESS</h4>

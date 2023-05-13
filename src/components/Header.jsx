@@ -10,7 +10,7 @@ import useScrollHandler from '@hooks/useScrollHandler';
 const Header = () => {
   const { scrollPosition } = useScrollHandler();
   const [itsTimeToChangeContrast, setItsTimeToChangeContrast] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const article =
@@ -23,7 +23,7 @@ const Header = () => {
 
   return (
     <header className={`header ${scrollPosition > 20 ? 'minimize' : ''}`}>
-      <Navbar collapseOnSelect expand='md' expanded={isOpen}>
+      <Navbar collapseOnSelect expand='md' expanded={isMenuOpen}>
         <div className='container'>
           <Link href={'/'} className={`header__logo`}>
             <Image
@@ -35,25 +35,28 @@ const Header = () => {
           </Link>
           <Navbar.Toggle
             aria-controls='responsive-navbar-nav'
-            onClick={() => setIsOpen(isOpen ? false : 'expanded')}
+            onClick={() => setIsMenuOpen(isMenuOpen ? false : 'expanded')}
           />
-          <Navbar.Collapse id='responsive-navbar-nav' isOpen={isOpen}>
+          <Navbar.Collapse
+            id='responsive-navbar-nav'
+            isopen={isMenuOpen.toString()}
+          >
             <Nav className={`ms-auto header__menu d-flex align-items-center`}>
               <Link
                 href={'/#our-services'}
                 scroll={false}
-                onClick={() => setIsOpen(false)}
+                onClick={() => setIsMenuOpen(false)}
               >
                 Our services
               </Link>
-              {/*<Link href={'/apply'} onClick={() => setIsOpen(false)}>
+              {/*<Link href={'/apply'} onClick={() => setIsMenuOpen(false)}>
                 Apply for a job
   </Link>*/}
               <Link
                 href={'/#contact-us'}
                 scroll={false}
                 className={`header__menu--principal`}
-                onClick={() => setIsOpen(false)}
+                onClick={() => setIsMenuOpen(false)}
               >
                 CONTACT US
               </Link>

@@ -35,13 +35,13 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className='col-12 col-lg-3 text-center text-xl-start footer__item--info'>
+        {/*<div className='col-12 col-lg-3 text-center text-xl-start footer__item--info'>
           <ul>
             <li>59 Street, B4 Aooartment, USA</li>
             <li>+985-8444-444</li>
             <li>info@joebarsolutions.com</li>
-          </ul>
-        </div>
+  </ul>
+        </div>*/}
       </div>
       <p className='text-center m-0 footer__copyright p-4'>
         © {currentYear.getFullYear()} Joe Bar Business. Copyright and rights

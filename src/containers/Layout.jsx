@@ -168,7 +168,7 @@ const Layout = () => {
           </h3>
         </section>
       </article>
-      <article className='why-us-container' data-aos='fade-left'>
+      <article className='why-us-container' data-aos='fade-right'>
         <h2>WHY US?</h2>
         <section className='container mx-auto why-us row'>
           <div className='col-12 col-md-4 why-us__card'>

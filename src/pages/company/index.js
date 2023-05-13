@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import AOS from 'aos';
-import Head from 'next/head';
 import Company from '@containers/Company';
 import Seo from '@components/Seo';
 import WhatsAppButton from '@components/WhatsAppButton';
@@ -14,12 +13,10 @@ const CompanyHome = () => {
   }, []);
   return (
     <>
-      <Head>
-        <Seo title={`Contact Us | Joe Bar Business Solutions`} />
-      </Head>
+      <Seo />
       <main>
         <Company />
-        <WhatsAppButton />
+        {/*<WhatsAppButton />*/}
       </main>
     </>
   );

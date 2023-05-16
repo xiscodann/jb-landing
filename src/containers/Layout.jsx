@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Header from '@components/Header';
 import Footer from '@components/Footer';
 import Link from 'next/link';
+import availableJobs from '../api/jobs-en.json';
 
 import presentationImage from '@images/presentation-image.jpg';
 import operationalExcellenceImage from '@images/what-we-do.jpg';
@@ -13,37 +14,6 @@ import technicalIcon from '@icons/technical.svg';
 import selectionIcon from '@icons/selection.svg';
 import managementIcon from '@icons/management.svg';
 import connectionIcon from '@icons/connection.svg';
-
-const hiring = [
-  {
-    title: 'Engineering jobs',
-    jobs: ['Automation', 'Robotics', 'Industrial', 'Software'],
-  },
-  {
-    title: 'Technical jobs',
-    jobs: [
-      'Maintenance Technicians',
-      'Mechanical Designers',
-      'HVAC Technicians',
-      'Injection/Blow Molding',
-    ],
-  },
-];
-
-const jobs = [
-  {
-    title: 'Staffing Services',
-    subtitle: '',
-    description:
-      'We know that the toughest single challenge in running your business is finding the right people. We are experts at finding international talent for full time positions, project base, or nearshore services. We service from new entrepreneurs to the largest asset-based companies. Improve your overall performance and reduce costs by outsourcing our bilingual professionals for entry-level, and senior positions.',
-  },
-  {
-    title: 'Operational Excellence Consulting',
-    subtitle: '',
-    description:
-      'We are expert on reducing waste, developing people, and transforming your operations using Lean Leadership methodologies.',
-  },
-];
 
 const Layout = () => {
   return (
@@ -119,33 +89,33 @@ const Layout = () => {
       >
         <h2>OUR SERVICES</h2>
         <section className='container row mx-auto hiring d-flex justify-content-center'>
-          <div className='col-12 col-md-6 col-lg-5 col-xl-3'>
-            <div className='hiring__card red'>
+          <div className='col-12 col-md-6 col-lg-5 col-xl-3 my-2'>
+            <div className='hiring__card red d-flex justify-content-start h-100'>
               <div className='hiring__card--image'>
                 <Image src={engineeringIcon} alt='Engineering services' fill />
               </div>
               <p className='hiring__card--title'>ENGINEERING</p>
               <ul className='hiring__card--list'>
-                <li>Automation</li>
-                <li>Robotics</li>
-                <li>Industrial</li>
-                <li>Electrical</li>
-                <li>Mechanical</li>
+                {availableJobs.map(({ type, shortTitle }, index) => {
+                  if (type === 'engineer') {
+                    return <li key={`${shortTitle}-${index}`}>{shortTitle}</li>;
+                  }
+                })}
               </ul>
             </div>
           </div>
-          <div className='col-12 col-md-6 col-lg-5 col-xl-3'>
-            <div className='hiring__card blue'>
+          <div className='col-12 col-md-6 col-lg-5 col-xl-3 my-2'>
+            <div className='hiring__card blue d-flex justify-content-start h-100'>
               <div className='hiring__card--image'>
                 <Image src={technicalIcon} alt='Technical services' fill />
               </div>
               <p className='hiring__card--title'>TECHNICAL</p>
               <ul className='hiring__card--list'>
-                <li>Maintenance Technicians</li>
-                <li>Mechanical Designers</li>
-                <li>Certified Welders</li>
-                <li>Injection/Blow Molding</li>
-                <li>HVAC Technicians</li>
+                {availableJobs.map(({ type, shortTitle }, index) => {
+                  if (type === 'technical') {
+                    return <li key={`${shortTitle}-${index}`}>{shortTitle}</li>;
+                  }
+                })}
               </ul>
             </div>
           </div>

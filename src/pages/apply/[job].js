@@ -14,12 +14,10 @@ const WorkForm = () => {
   }, []);
   return (
     <>
-      <Head>
-        <Seo title={`Apply for a job - ${job} | Joe Bar Business Solutions`} />
-      </Head>
+      <Seo />
       <main>
-        <Job job={job} />
-        <WhatsAppButton />
+        {job && <Job job={job} />}
+        {/*<WhatsAppButton />*/}
       </main>
     </>
   );

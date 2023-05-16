@@ -23,7 +23,7 @@
     }
     h3 {
       color: map-get($colors, 'black-principal');
-      font-family: '__Bebas_Neue_758df0';
+      font-family: $font-family-Bebas;
       font-size: 4rem;
       @include mq-sm {
         font-size: 3rem;
@@ -31,7 +31,7 @@
     }
     h4 {
       color: map-get($colors, 'red-wine');
-      font-family: '__Bebas_Neue_758df0';
+      font-family: $font-family-Bebas;
       font-size: 2.5rem;
     }
     p {

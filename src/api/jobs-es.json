@@ -1,0 +1,139 @@
+[
+  {
+    "title": "Ingenieros en automatización",
+    "shortTitle": "Automatización",
+    "type": "engineer",
+    "match": "automatizacion",
+    "image": "services-engineer-automation.jpg",
+    "subtitle": "Empleados con títulos de ingeniería en automatización, robótica o mecatrónica de las escuelas técnicas de México.",
+    "description": [
+      "Experiencia en solución de problemas mecánicos y gestión deproyectos.",
+      "Conocimientos en programación de autómatas programables y sistemas de control.",
+      "Conocimientos de Allen-Bradley, Siemens y Compactlogix.",
+      "Capacidad para solucionar fallos de equipos y realizar pruebas de sistemas complejos.",
+      "Conocimientos sobre seguridad de la maquinaria y la evaluación de riesgos."
+    ]
+  },
+  {
+    "title": "Ingenieros industriales",
+    "shortTitle": "Industrial",
+    "type": "engineer",
+    "match": "ingenieria-industrial",
+    "image": "services-engineer-industrial.jpg",
+    "subtitle": "Empleados con títulos de ingeniería industrial de las escuelas técnicas en México.",
+    "description": [
+      "El Ingeniero de Mejora Continua, en estrecha colaboración con el director de fabricación, aplica estratégicamente la manufactura esbelta para mejorar continuamente el proceso de producción.",
+      "Trabaja con proveedores externos para garantizar que los equipos y consumibles que se utilicen sean apropiados para las operaciones y sean la solución más eficiente.",
+      "Contribuye a la iniciativa de las 5S japonesas para asegurar que las mejoras se mantengan y afiancen a la empresa.",
+      "Organiza eventos de mejora Kaizen.",
+      "Garantiza que la distribución de la fábrica, tanto a nivel macroeconómico como microeconómico, sea la adecuada para un proceso de fabricación eficiente."
+    ]
+  },
+  {
+    "title": "Diseñador mecánico",
+    "shortTitle": "Diseño mecánico",
+    "type": "engineer",
+    "match": "diseno-mecanico",
+    "image": "services-engineer-mechanical.jpg",
+    "subtitle": "Empleados con certificaciones en soldadura de las escuelas técnicas de México.",
+    "description": [
+      "Se reúne con diseñadores e ingenieros para hablar sobre ideas de diseño.",
+      "Desarrolla diseños de productos desde cero.",
+      "Presenta borradores de diseño para que el cliente los apruebe.",
+      "Garantiza que los diseños de productos cumplan con las normas estructurales y de seguridad exigidas.",
+      "Genera modelos CAD sólidos y de superficie con AutoCAD.",
+      "Combina técnica y estética para crear diseños finales.",
+      "Presenta diversas perspectivas de diseño para mejoras y adaptaciones de la construcción.",
+      "Prepara modelos AutoCAD.",
+      "Presenta modelos a los clientes.",
+      "Realiza informes de trabajo."
+    ]
+  },
+  {
+    "title": "Técnicos en confiabilidad / mantenimiento",
+    "shortTitle": "Mantenimiento",
+    "type": "technical",
+    "match": "mantenimiento",
+    "image": "services-technical-reliability.jpg",
+    "subtitle": "Empleados con títulos de ingeniería mecánica y eléctrica de las escuelas técnicas de México.",
+    "description": [
+      "Experiencia en la mejora del mantenimiento preventivo y predictivo.",
+      "Reparación de equipos defectuosos y estructuras dañadas.",
+      "Desarrollo y aplicación de procedimientos de mantenimiento preventivo.",
+      "Gestión de sistemas de calefacción y fontanería para garantizar la funcionalidad.",
+      "Planificación y programación de reparaciones.",
+      "Ejecución de controles de calidad periódicos de los equipos y sistemas para garantizar que todo se ajuste a las normas.",
+      "Ejecución de tareas de mantenimiento general como jardinería, pintura y carpintería.",
+      "Conocimientos de Mantenimiento Productivo Total (TPM).",
+      "El objetivo es mejorar la eficacia global de los equipos (OEE) (Calidad, disponibilidad y eficiencia)."
+    ]
+  },
+  {
+    "title": "Técnicos en inyección y soplado de plásticos",
+    "shortTitle": "Moldeo por inyección/soplado",
+    "type": "technical",
+    "match": "inyeccion-soplado",
+    "image": "services-technical-injection.jpg",
+    "subtitle": "Empleados con títulos de Ingeniería mecánica y eléctrica de las escuelas técnicas de México.",
+    "description": [
+      "Lee planos y órdenes de trabajo para comprender y cumplir las especificaciones del cliente.",
+      "Produce piezas al seguir las órdenes de trabajo, los planos y las carpetas de programación.",
+      "Prepara los moldes para cada unidad de trabajo y lleva a cabo el mantenimiento de los equipos al cumplir los requisitos de mantenimiento preventivo y seguir las instrucciones del fabricante.",
+      "Cumple las especificaciones de los planos al supervisar las temperaturas del proceso y las presiones de inyección para detectar anomalías.",
+      "Verifica los ajustes a través de la medición de las posiciones, la primera pieza y las piezas de trabajo de muestra.",
+      "Calcula dimensiones y tolerancias a partir de conocimientos matemáticos e instrumentos como micrómetros, calibres Vernier y comparadores ópticos.",
+      "Reporta cuando la maquinaria necesita reparaciones a sus supervisores y jefes de equipo.",
+      "Mantiene un entorno de trabajo seguro y limpio mediante el cumplimiento de todas las políticas y procedimientos de gestión ambiental y de seguridad y salud ocupacional."
+    ]
+  },
+  {
+    "title": "Soldadores certificados",
+    "shortTitle": "Soldadura",
+    "type": "technical",
+    "match": "soldadura",
+    "image": "services-technical-welders.jpg",
+    "subtitle": "Empleados con certificaciones en soldadura de las escuelas técnicas de México.",
+    "description": [
+      "Lee y comprende los planos antes de comenzar un proyecto.",
+      "Busca los materiales que se utilizarán en el proyecto.",
+      "Mide y corta los materiales según las especificaciones.",
+      "Suelda materiales al utilizar los materiales correctos para unir los metales.",
+      "Revisa los trabajos terminados para asegurarse de que se ajustan a las tolerancias marcadas en los planos."
+    ]
+  },
+  {
+    "title": "Técnico en HVAC",
+    "shortTitle": "Técnico HVAC",
+    "type": "technical",
+    "match": "hvac",
+    "image": "services-technical-hvac.jpg",
+    "subtitle": "Empleados con certificaciones en soldadura de las escuelas técnicas de México.",
+    "description": [
+      "Realiza instalaciones, mantenimiento y reparación de sistemas y equipos de ventilación y aire acondicionado.",
+      "Identifica los riesgos de mantenimiento de los equipos.",
+      "Diagnostica averías eléctricas y mecánicas de sistemas de climatización.",
+      "Limpia, ajusta y repara sistemas y presta servicios de garantía.",
+      "Realiza reparaciones de emergencia de manera rápida y eficiente.",
+      "Proporciona dirección técnica y capacitación en el trabajo.",
+      "Lleva registros diarios y de todas las funciones de mantenimiento.",
+      "Garantiza el cumplimiento de las normas sobre electrodomésticos y de la Ley de salud y seguridad ocupacional.",
+      "Cumple con las normas de servicio, las instrucciones de trabajo y los requisitos de los clientes.",
+      "Atiende las consultas de los clientes."
+    ]
+  },
+  {
+    "title": "Técnicos certificados en CNC",
+    "shortTitle": "Control Numérico Computarizado",
+    "type": "technical",
+    "match": "control-numerico-computarizado",
+    "image": "services-technical-cnc.jpg",
+    "subtitle": "Control Numérico Computarizado (CNC): Empleados con títulos de Ingeniería Mecánica y Eléctrica de las escuelas técnicas de México.",
+    "description": [
+      "Realiza el mantenimiento y reparación de todos los activos para garantizar que se encuentren en condiciones adecuadas de funcionamiento.",
+      "Proporciona mantenimiento preventivo y adecuado en varios CNC complejos: fresado de 5 ejes, aplicaciones de fresado y torneado, tornos horizontales y verticales.",
+      "Soluciona problemas y repara fallos de sistemas eléctricos y de control relacionados con PLC, HMI, servomotores, servoamplificadores, entradas / salidas, sensores de campo, etc.",
+      "Soluciona problemas y reparar varios sistemas hidráulicos y neumáticos de maquinaria: actuadores, válvulas, bombas, filtros, etc.",
+      "Soluciona problemas y repara sistemas mecánicos de maquinaria: husillos de bolas, rieles lineales, guías, cajas de engranajes, etc."
+    ]
+  }
+]

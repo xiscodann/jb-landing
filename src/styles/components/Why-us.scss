@@ -4,7 +4,7 @@
 .why-us-container {
   margin: 115px auto 90px auto;
   h2 {
-    font-family: '__Bebas_Neue_758df0';
+    font-family: $font-family-Bebas;
     font-size: map-get($font-size, 'lg');
     text-align: center;
     position: relative;
@@ -43,7 +43,7 @@
       border: 8px solid #fff;
     }
     &--title {
-      font-family: '__Bebas_Neue_758df0';
+      font-family: $font-family-Bebas;
       font-size: map-get($font-size, 'md');
       padding-top: 10px;
     }

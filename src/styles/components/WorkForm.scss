@@ -9,15 +9,7 @@
 }
 
 .work-form-content {
-  background-color: map-get($colors, 'red-wine');
-  clip-path: polygon(0 0, 100% 0, 100% 96%, 0% 100%);
-  position: relative;
-  @include mq-lg {
-    clip-path: polygon(0 0, 100% 0, 100% 98%, 0% 100%);
-  }
-  @include mq-sm {
-    clip-path: polygon(0 0, 100% 0, 100% 98.5%, 0% 100%);
-  }
+  padding-top: 130px;
 }
 
 .work-form {
@@ -30,17 +22,16 @@
   color: #fff;
   text-align: center;
   transition: 0.2s all;
-  h1 {
-    margin-bottom: 35px;
-    span {
-      color: map-get($colors, 'red-wine-light');
-    }
-  }
-  p {
-    color: map-get($colors, 'red-wine-text');
-    small {
-      font-size: map-get($font-size, 'xs');
-      color: map-get($colors, 'red-wine-text');
+  &__title {
+    font-family: $font-family-Bebas;
+    font-size: map-get($font-size, 'lg');
+    text-align: center;
+    position: relative;
+    color: map-get($colors, 'red-wine');
+    font-weight: 400;
+    margin-bottom: 30px;
+    @include mq-xs {
+      font-size: 3rem;
     }
   }
   &__form {
@@ -78,43 +69,40 @@
       min-height: 600px;
     }
   }
-}
-.prueba {
-  label {
-    font-size: 14px;
-    padding-bottom: 10px;
-    color: #797979;
+  &__job {
+    position: relative;
   }
-  input,
-  select,
-  textarea {
-    height: 45px !important;
-  }
-}
-.separator {
-  background-color: var(--Divider-bgColor);
-  color: var(--Divider-color);
-  position: relative;
-  text-align: left;
-  //white-space: nowrap;
-}
-.separator:before {
-  border-bottom: var(--Divider-line);
-  content: '';
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 100%;
 }
 
-.separator-text {
-  background-color: inherit;
-  display: inline-block;
-  padding: 0 var(--Divider-textPadding);
-  position: relative;
-  z-index: 1;
-  left: 0;
+.experience {
+  $parent: &;
+  &__list {
+    &--title {
+      max-width: 500px;
+      margin: auto;
+      padding-bottom: 25px;
+    }
+    &--cv {
+      text-align: left;
+      list-style: none;
+      max-width: 300px;
+      margin: auto;
+      li {
+        &::before {
+          content: '';
+          border-color: transparent #fff;
+          border-style: solid;
+          border-width: 0.35em 0 0.35em 0.45em;
+          display: block;
+          height: 0;
+          width: 0;
+          left: -1em;
+          top: 0.9em;
+          position: relative;
+        }
+      }
+    }
+  }
 }
 
 //--------------------

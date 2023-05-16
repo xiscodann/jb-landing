@@ -4,7 +4,7 @@
 .hiring-container {
   margin: 100px 0;
   h2 {
-    font-family: '__Bebas_Neue_758df0';
+    font-family: $font-family-Bebas;
     font-size: map-get($font-size, 'lg');
     text-align: center;
     position: relative;
@@ -30,6 +30,7 @@
 
 .hiring {
   $parent: &;
+  margin-top: 30px;
   &__card {
     display: flex;
     align-items: center;
@@ -38,7 +39,6 @@
     border-radius: 14px;
     color: #fff;
     padding: 30px 5px;
-    margin-top: 20px;
     &.red {
       background-color: map-get($colors, 'red-wine');
     }
@@ -52,7 +52,7 @@
       text-align: center;
     }
     &--title {
-      font-family: '__Bebas_Neue_758df0';
+      font-family: $font-family-Bebas;
       font-size: map-get($font-size, 'md');
     }
     &--list {
@@ -60,6 +60,13 @@
       padding: 0;
       margin: 0;
       line-height: 2;
+      li a {
+        color: #fff;
+        text-decoration: none;
+        &:hover {
+          color: #ebebeb;
+        }
+      }
     }
     &--button {
       border-radius: 12px;

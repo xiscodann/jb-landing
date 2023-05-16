@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Header from '@components/Header';
 import CarouselOfJobs from '@components/CarouselOfJobs';
@@ -6,7 +7,7 @@ import availableJobs from '../api/jobs-en.json';
 import companyImage from '@images/company-image.jpg';
 
 import Footer from '@components/Footer';
-import { useEffect } from 'react';
+import { sendContactForm } from 'lib/api';
 
 const benefits = [
   {
@@ -37,9 +38,42 @@ const benefits = [
 ];
 
 const Company = () => {
+  const formData = useRef();
+  const [sendEmailLoading, setSendEmailLoading] = useState(false);
+  const [errorSendEmail, setErrorSendEmail] = useState(null);
+  const [successSendEmail, setSuccessSendEmail] = useState(false);
+
+  const handlerSubmitSendContact = async (e) => {
+    e.preventDefault();
+    setSendEmailLoading(true);
+    setErrorSendEmail(false);
+    const inputs = [...formData.current.elements].filter(
+      ({ className }) => className === 'form-control'
+    );
+    const body = inputs.reduce((acc, curr) => {
+      return {
+        ...acc,
+        [curr.name]: curr.value,
+      };
+    }, {});
+    try {
+      const response = await sendContactForm(body);
+      if (response.status === 200) {
+        setSuccessSendEmail(true);
+        inputs.forEach((input) => (input.value = ''));
+      }
+    } catch (error) {
+      console.error(error);
+      setErrorSendEmail(error);
+      setSuccessSendEmail(false);
+    }
+    setSendEmailLoading(false);
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <>
       <Header />
@@ -109,12 +143,27 @@ const Company = () => {
         <section className='container col-12 col-lg-8 contact-form mx-auto'>
           <h3>CONTACT US</h3>
           <h4>INNOVATIVE SOLUTIONS FOR YOUR BUSINESS</h4>
-          <form className='col-12 mx-auto contact__form--form'>
+          {errorSendEmail && (
+            <div class='alert alert-danger mt-3' role='alert'>
+              ¡Oops!, we couldn&apos;t send your message, please try again
+            </div>
+          )}
+          {successSendEmail && (
+            <div class='alert alert-success mt-3' role='alert'>
+              ¡Great!, your message was sent successfully
+            </div>
+          )}
+          <form
+            className='col-12 mx-auto contact__form--form'
+            onSubmit={handlerSubmitSendContact}
+            ref={formData}
+          >
             <div className='form-floating mb-3'>
               <input
                 type='text'
                 className='form-control'
                 id='name'
+                name='name'
                 placeholder='Name'
                 required
               />
@@ -125,6 +174,7 @@ const Company = () => {
                 type='text'
                 className='form-control'
                 id='organization'
+                name='organization'
                 placeholder='Organization name'
                 required
               />
@@ -135,6 +185,7 @@ const Company = () => {
                 type='email'
                 className='form-control'
                 id='email'
+                name='email'
                 placeholder='Email'
                 required
               />
@@ -145,13 +196,14 @@ const Company = () => {
                 className='form-control'
                 placeholder='Leave a comment here'
                 id='message'
+                name='message'
                 required
               ></textarea>
               <label htmlFor='message'>Message</label>
             </div>
             <div className='text-center'>
-              <button type='submit' className='btn'>
-                SEND
+              <button type='submit' className='btn' disabled={sendEmailLoading}>
+                {sendEmailLoading ? 'SENDING' : 'SEND'}
               </button>
             </div>
           </form>

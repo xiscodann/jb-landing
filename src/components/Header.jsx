@@ -49,9 +49,9 @@ const Header = () => {
               >
                 Our services
               </Link>
-              {/*<Link href={'/apply'} onClick={() => setIsMenuOpen(false)}>
+              <Link href={'/apply'} onClick={() => setIsMenuOpen(false)}>
                 Apply for a job
-  </Link>*/}
+              </Link>
               <Link
                 href={'/#contact-us'}
                 scroll={false}

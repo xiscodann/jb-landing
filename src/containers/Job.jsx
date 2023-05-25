@@ -6,27 +6,31 @@ import Check from '@components/Check';
 import Image from 'next/image';
 import { formatBytes } from '@helpers/formatBytes';
 import availableJobs from '../api/jobs-es.json';
+import { sendCandidateForm } from 'lib/api';
 
 import iconCheck2 from '@icons/check-2.png';
 import iconFile from '@icons/file-icon.png';
 
 const MAX_WEIGHT = 10485760; //bytes 10485760
+const INITIAL_STATE = {
+  name: '',
+  lastname: '',
+  email: '',
+  identification: '',
+  hold_technical_interview: '',
+  experience: '',
+  accept_terms: false,
+  file: '',
+};
 
 const Job = ({ job }) => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [isErrorSendingMail, setIsErrorSendingMail] = useState(false);
+  const [isEmailWasSent, setIsEmailWasSent] = useState(false);
   const [jobFound, setJobFound] = useState([]);
-  const [selectedFile, setSelectedFile] = useState(0);
+  const [selectedFile, setSelectedFile] = useState(false);
   const [selectedFileError, setSelectedFileError] = useState(false);
-  const [dataVacancy, setDataVacancy] = useState({
-    name: '',
-    surname: '',
-    email: '',
-    identification: '',
-    hold_technical_interview: '',
-    experience: '',
-    accept_terms: '',
-    //--------
-    file: '',
-  });
+  const [dataVacancy, setDataVacancy] = useState(INITIAL_STATE);
 
   const readFile = (input) => {
     if (input.target?.files && input.target?.files?.length > 0) {
@@ -42,6 +46,33 @@ const Job = ({ job }) => {
         setSelectedFile(input.target.files[0]),
         setDataVacancy({ ...dataVacancy, file: input.target.files[0] });
     }
+  };
+
+  const submitForm = async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData();
+    Object.entries(dataVacancy).forEach((element) => {
+      formData.append(element[0], element[1]);
+    });
+
+    try {
+      setIsLoading(true);
+      setIsErrorSendingMail(false);
+      setIsEmailWasSent(false);
+      const response = await sendCandidateForm(formData);
+      if (response.status === 200) {
+        setIsEmailWasSent(true);
+        setDataVacancy(INITIAL_STATE);
+        setSelectedFile(false);
+        document.getElementById('file-cv').value = '';
+      }
+    } catch (err) {
+      console.error(err);
+      setIsErrorSendingMail(true);
+    }
+
+    setIsLoading(false);
   };
 
   useEffect(() => {
@@ -123,13 +154,33 @@ const Job = ({ job }) => {
         <section className='container col-12 col-lg-8 contact-form mx-auto'>
           <h3>TRABAJA CON NOSOTROS</h3>
           <p>Envía tu CV y nos pondremos en contacto contigo.</p>
-          <form className='col-12 mx-auto contact__form--form'>
+          {isErrorSendingMail && (
+            <div className='alert alert-danger mt-3' role='alert'>
+              ¡Oops!, no logramos enviar tu CV. Por favor, intentalo nuevamente
+            </div>
+          )}
+          {isEmailWasSent && (
+            <div className='alert alert-success mt-3' role='alert'>
+              ¡Genial!, tu CV fue enviado con éxito
+            </div>
+          )}
+          <form
+            className='col-12 mx-auto contact__form--form'
+            onSubmit={submitForm}
+          >
             <div className='form-floating mb-3'>
               <input
                 type='text'
                 className='form-control'
                 id='name'
                 placeholder='Name'
+                value={dataVacancy.name}
+                onChange={(e) =>
+                  setDataVacancy({
+                    ...dataVacancy,
+                    name: e.target.value,
+                  })
+                }
                 required
               />
               <label htmlFor='name'>Nombres</label>
@@ -138,11 +189,18 @@ const Job = ({ job }) => {
               <input
                 type='text'
                 className='form-control'
-                id='surname'
+                id='lastname'
                 placeholder='Apellidos'
+                value={dataVacancy.lastname}
+                onChange={(e) =>
+                  setDataVacancy({
+                    ...dataVacancy,
+                    lastname: e.target.value,
+                  })
+                }
                 required
               />
-              <label htmlFor='surname'>Apellidos</label>
+              <label htmlFor='lastname'>Apellidos</label>
             </div>
             <div className='form-floating mb-3'>
               <input
@@ -150,6 +208,13 @@ const Job = ({ job }) => {
                 className='form-control'
                 id='email'
                 placeholder='Correo electrónico'
+                value={dataVacancy.email}
+                onChange={(e) =>
+                  setDataVacancy({
+                    ...dataVacancy,
+                    email: e.target.value,
+                  })
+                }
                 required
               />
               <label htmlFor='email'>Correo electrónico</label>
@@ -159,7 +224,14 @@ const Job = ({ job }) => {
                 type='text'
                 className='form-control'
                 id='identification'
-                placeholder='Correo electrónico'
+                placeholder='Ciudadanía'
+                value={dataVacancy.identification}
+                onChange={(e) =>
+                  setDataVacancy({
+                    ...dataVacancy,
+                    identification: e.target.value,
+                  })
+                }
                 required
               />
               <label htmlFor='identification'>Ciudadanía</label>
@@ -168,7 +240,7 @@ const Job = ({ job }) => {
               <select
                 className='form-select py-3 mb-3'
                 id='hold_technical_interview'
-                defaultValue={dataVacancy.hold_technical_interview}
+                defaultValue=''
                 onChange={(e) =>
                   setDataVacancy({
                     ...dataVacancy,
@@ -177,28 +249,33 @@ const Job = ({ job }) => {
                 }
                 required
               >
-                <option selected disabled>
+                <option value='' disabled>
                   ¿Puedes sostener una entrevista técnica en inglés?
                 </option>
-                <option value='Si'>
+                <option value='Yes, I can hold a technical interview in English'>
                   Si, puedo mantener una entrevista técnica en inglés
                 </option>
-                <option value='No'>
+                <option value='No, I can`t hold a technical interview in English'>
                   No puedo mantener una entrevista técnica en inglés
                 </option>
               </select>
             </div>
             <div className='form-floating mb-3'>
               <input
-                type='email'
+                type='number'
                 className='form-control'
-                id='email'
-                placeholder='Correo electrónico'
+                id='experience'
+                placeholder={`Años de experiencia en ${job}`}
+                value={dataVacancy.experience}
+                onChange={(e) =>
+                  setDataVacancy({
+                    ...dataVacancy,
+                    experience: e.target.value,
+                  })
+                }
                 required
               />
-              <label htmlFor='email'>
-                Años de experiencia totales en {job}
-              </label>
+              <label htmlFor='experience'>Años de experiencia en {job}</label>
             </div>
             <div className='mt-5'>
               {selectedFileError ? (
@@ -214,8 +291,10 @@ const Job = ({ job }) => {
                   <input
                     className='file-upload-input'
                     type='file'
+                    id='file-cv'
                     onChange={(e) => readFile(e)}
                     accept='application/pdf'
+                    required
                   />
                   <div className='drag-text'>
                     {selectedFile ? (
@@ -247,21 +326,22 @@ const Job = ({ job }) => {
                 className='form-check-input'
                 type='checkbox'
                 id='accept_terms'
-                value={dataVacancy.accept_terms}
+                checked={dataVacancy.accept_terms}
                 onChange={(e) =>
                   setDataVacancy({
                     ...dataVacancy,
                     accept_terms: e.target.value,
                   })
                 }
+                required
               />
               <label className='form-check-label' htmlFor='accept_terms'>
                 Acepto la política de privacidad y datos.
               </label>
             </div>
             <div className='text-center'>
-              <button type='submit' className='btn'>
-                SEND
+              <button type='submit' className='btn' disabled={isLoading}>
+                {isLoading ? 'ENVIANDO' : 'ENVIAR'}
               </button>
             </div>
           </form>

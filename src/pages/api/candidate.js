@@ -1,4 +1,5 @@
 import { mailOptions, transporter } from './nodemailer';
+const busboy = require('busboy');
 
 const CONTACT_MESSAGE_FIELDS = {
   name: 'Name',
@@ -7,7 +8,7 @@ const CONTACT_MESSAGE_FIELDS = {
   message: 'Message',
 };
 
-const generateEmailContent = (data) => {
+const generateEmailContent = (data, attachments) => {
   const stringData = Object.entries(data).reduce(
     (str, [key, val]) =>
       (str += `${CONTACT_MESSAGE_FIELDS[key]}: \n${val} \n \n`),
@@ -118,7 +119,7 @@ const generateEmailContent = (data) => {
                                     font-family: 'Rubik', sans-serif;
                                   "
                                 >
-                                  A customer wants to contact
+                                  Apply for a job
                                 </h1>
                                 <p
                                   style="
@@ -128,8 +129,7 @@ const generateEmailContent = (data) => {
                                     margin: 8px 0 30px;
                                   "
                                 >
-                                  Here are the customer's contact information and
-                                  message
+                                  A candidate wants to apply his CV with Joe Bar Business Solutions
                                 </p>
                               </td>
                             </tr>
@@ -161,13 +161,10 @@ const generateEmailContent = (data) => {
                                           margin-top: 0;
                                         "
                                       >
-                                        <strong>${
-                                          data.name
-                                        }</strong>, represents the
-                                        company: ${data.organization}
+                                        <strong>${data.name} ${data.lastname}</strong>
                                       </h3>
                                       <span style="color: #737373; font-size: 14px"
-                                        >Name and organization</span
+                                        >Candidate name</span
                                       >
                                     </td>
                                   </tr>
@@ -197,21 +194,83 @@ const generateEmailContent = (data) => {
                                       >
                                     </td>
                                   </tr>
-                                  <tr style="display: block">
+                                  <tr
+                                    style="
+                                      border-bottom: 1px solid #ebebeb;
+                                      margin-bottom: 26px;
+                                      padding-bottom: 16px;
+                                      display: block;
+                                    "
+                                  >
                                     <td style="vertical-align: top">
-                                      <p
+                                      <h3
                                         style="
                                           color: #4d4d4d;
+                                          font-size: 20px;
                                           font-weight: 400;
-                                          line-height: 25px;
+                                          line-height: 30px;
                                           margin-bottom: 3px;
                                           margin-top: 0;
                                         "
                                       >
-                                        ${data.message || 'Without message'}
-                                      </p>
+                                        <strong>${data.identification}</strong>
+                                      </h3>
                                       <span style="color: #737373; font-size: 14px"
-                                        >This is the message</span
+                                        >Identification</span
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr
+                                    style="
+                                      border-bottom: 1px solid #ebebeb;
+                                      margin-bottom: 26px;
+                                      padding-bottom: 16px;
+                                      display: block;
+                                    "
+                                  >
+                                    <td style="vertical-align: top">
+                                      <h3
+                                        style="
+                                          color: #4d4d4d;
+                                          font-size: 20px;
+                                          font-weight: 400;
+                                          line-height: 30px;
+                                          margin-bottom: 3px;
+                                          margin-top: 0;
+                                        "
+                                      >
+                                        <strong>${data.hold_technical_interview}</strong>
+                                      </h3>
+                                      <span style="color: #737373; font-size: 14px"
+                                        >
+                                        Can the candidate hold a technical interview in English?</span
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr
+                                    style="
+                                      border-bottom: 1px solid #ebebeb;
+                                      margin-bottom: 26px;
+                                      padding-bottom: 16px;
+                                      display: block;
+                                    "
+                                  >
+                                    <td style="vertical-align: top">
+                                      <h3
+                                        style="
+                                          color: #4d4d4d;
+                                          font-size: 20px;
+                                          font-weight: 400;
+                                          line-height: 30px;
+                                          margin-bottom: 3px;
+                                          margin-top: 0;
+                                        "
+                                      >
+                                        <strong>${data.experience}</strong>
+                                      </h3>
+                                      <span style="color: #737373; font-size: 14px"
+                                        >
+                                        Experience</span
                                       >
                                     </td>
                                   </tr>
@@ -251,28 +310,70 @@ const generateEmailContent = (data) => {
       </body>
     </html>
     `,
+    attachments: {
+      filename: attachments[0].filename.filename,
+      content: attachments[0].fileBuffer,
+      contentType: attachments[0].filename.mimeType,
+    },
   };
 };
 
-const handler = async (req, res) => {
+const handler = (req, res) => {
   if (req.method === 'POST') {
-    const data = req.body;
-    if (!data.name || !data.organization || !data.email || !data.message)
-      return res.status(400).json({ message: 'Bad request' });
-    try {
-      await transporter.sendMail({
-        ...mailOptions,
-        to: process.env.CONTACT_EMAIL,
-        ...generateEmailContent(data),
-        subject: 'A customer wants to contact | Joe Bar landing page',
+    const formData = {};
+    const bb = busboy({ headers: req.headers });
+    const files = [];
+    const fileDate = [];
+
+    bb.on('file', (fieldname, file, filename, encoding, mimetype) => {
+      file.on('data', (data) => {
+        fileDate.push(data);
       });
-      return res.status(200).json({ status: 200 });
-    } catch (error) {
-      console.error(error);
-      return res.status(400).json({ message: error.message });
-    }
+      file.on('end', () => {
+        files.push({
+          fieldname,
+          file,
+          filename,
+          encoding,
+          mimetype,
+          fileBuffer: Buffer.concat(fileDate),
+        });
+      });
+    });
+
+    bb.on('field', (fieldname, value) => {
+      formData[fieldname] = value;
+    });
+
+    bb.on('finish', async () => {
+      try {
+        await transporter.sendMail({
+          ...mailOptions,
+          to: process.env.CANDIDATE_EMAIL,
+          ...generateEmailContent(formData, files),
+          subject: 'Apply for a job | Joe Bar landing page',
+        });
+        return res
+          .status(200)
+          .json({ message: 'Correo electrónico enviado con éxito' });
+      } catch (error) {
+        console.error(error);
+        return res.status(400).json({ message: error.message });
+      }
+    });
+
+    bb.on('error', function (err) {
+      return res.status(500).json({ message: err });
+    });
+
+    req.pipe(bb);
   }
-  return res.status(400).json({ message: 'Bad request' });
 };
 
 export default handler;
+
+export const config = {
+  api: {
+    bodyParser: false,
+  },
+};

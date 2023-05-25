@@ -15,10 +15,6 @@ import imapctIcon from '@icons/impact.jpg';
 import engineeringIcon from '@icons/engineering.svg';
 import technicalIcon from '@icons/technical.svg';
 
-//TEMPORAL ROUTER
-import Router from 'next/router';
-import { useEffect } from 'react';
-
 const benefits = [
   {
     icon: 'international-job',
@@ -44,10 +40,6 @@ const benefits = [
 ];
 
 const Apply = () => {
-  // TEMPORAL ROUTER
-  useEffect(() => {
-    Router.replace('/');
-  }, []);
   return (
     <>
       <Header />

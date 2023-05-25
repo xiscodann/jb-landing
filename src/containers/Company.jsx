@@ -144,12 +144,12 @@ const Company = () => {
           <h3>CONTACT US</h3>
           <h4>INNOVATIVE SOLUTIONS FOR YOUR BUSINESS</h4>
           {errorSendEmail && (
-            <div class='alert alert-danger mt-3' role='alert'>
+            <div className='alert alert-danger mt-3' role='alert'>
               ¡Oops!, we couldn&apos;t send your message, please try again
             </div>
           )}
           {successSendEmail && (
-            <div class='alert alert-success mt-3' role='alert'>
+            <div className='alert alert-success mt-3' role='alert'>
               ¡Great!, your message was sent successfully
             </div>
           )}

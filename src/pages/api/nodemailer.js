@@ -11,11 +11,11 @@ export const transporter = nodemailer.createTransport({
   port: 465,
   debug: true,
   auth: {
-    user: 'jbarrero@joebarbusinesssolutions.com',
-    pass: '3Purital@93$',
+    user: process.env.EMAIL_TRANSMITTER,
+    pass: process.env.PASS_TRANSMITTER,
   },
 });
 
 export const mailOptions = {
-  from: '"José Barrero" <jbarrero@joebarbusinesssolutions.com>',
+  from: `"Joe Bar Business Solutions" <${process.env.EMAIL_TRANSMITTER}>`,
 };

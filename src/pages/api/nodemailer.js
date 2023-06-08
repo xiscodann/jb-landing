@@ -1,14 +1,14 @@
 import nodemailer from 'nodemailer';
 
 export const transporter = nodemailer.createTransport({
-  host: 'smtpout.secureserver.net',
-  secure: true,
+  host: 'smtp.office365.com',
+  secure: false,
   secureConnection: false,
   tls: {
     ciphers: 'SSLv3',
   },
   requireTLS: true,
-  port: 465,
+  port: 587,
   debug: true,
   auth: {
     user: process.env.EMAIL_TRANSMITTER,

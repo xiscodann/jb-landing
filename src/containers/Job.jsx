@@ -91,7 +91,9 @@ const Job = ({ job }) => {
     <>
       <Header />
       <article className='work-form-content'>
-        <h2 className='work-form__title'>TRABAJA CON JOE BAR BUSINESS</h2>
+        <h2 className='work-form__title'>
+          TRABAJA CON JOE BAR BUSINESS SOLUTIONS
+        </h2>
         <section className='work-form__job'>
           {jobFound && (
             <div className='row'>
@@ -113,7 +115,7 @@ const Job = ({ job }) => {
                   <h3>{jobFound.title}</h3>
                   <p className='m-0'>{jobFound.subtitle}</p>
                   <p className='pt-3'>
-                    <span>Experience:</span>
+                    <span>Competencias:</span>
                   </p>
                 </div>
                 <div>
@@ -139,14 +141,13 @@ const Job = ({ job }) => {
       <article className='experience-container'>
         <section className='container mx-auto experience'>
           <h4 className='experience__list--title'>
-            Antes de enviar tu CV recuerda que debes cumplir con estos
+            Antes de enviar tu CV en inglés recuerda que debes cumplir con estos
             requisitos:
           </h4>
           <ul className='experience__list--cv'>
             <li>Cédula profesional</li>
             <li>Pasaporte vigente mínimo 1 año</li>
             <li>Licencia de conducción</li>
-            <li>Certificado de vacunación COVID</li>
           </ul>
         </section>
       </article>
@@ -161,7 +162,8 @@ const Job = ({ job }) => {
           )}
           {isEmailWasSent && (
             <div className='alert alert-success mt-3' role='alert'>
-              ¡Genial!, tu CV fue enviado con éxito
+              Agradecemos tu interés en trabajar con nosotros, revisaremos tu
+              perfil y pronto nos pondremos en contacto contigo.
             </div>
           )}
           <form

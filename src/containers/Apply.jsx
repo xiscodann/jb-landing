@@ -49,21 +49,21 @@ const Apply = () => {
         </div>
         <section className='apply container mx-auto row'>
           <div className='col-12 col-sm-10 col-md-8 col-lg-6'>
-            <h1>TRABAJA CON JOE BAR BUSINESS</h1>
-            <a href='#specialty' className='btn apply__button'>
+            <h1>TRABAJA CON JOE BAR BUSINESS SOLUTIONS</h1>
+            {/*<a href='#specialty' className='btn apply__button'>
               ENVIAR MI CV
-            </a>
+  </a>*/}
           </div>
         </section>
       </article>
       <article className='px-2'>
         <section className='container col-12 col-md-10 mx-auto we-help-you'>
           <div className='we-help-you__benefits'>
-            <h4>JOE BAR BUSINESS</h4>
+            {/*<h4>JOE BAR BUSINESS</h4>*/}
             <h3>TRABAJA CON NOSOTROS</h3>
             <p>
               Somos expertos en contratar talento técnico internacional (México
-              Y Canada) para puestos de tiempo completo o proyectos. Te
+              y Canada) para puestos de tiempo completo o proyectos. Te
               invitamos a unirte al equipo que te permitirá crear nuevas
               experiencias, generar impacto y valor a la operación de nuestros
               clientes, trabajando para compañías manufactureras en US.
@@ -173,7 +173,8 @@ const Apply = () => {
               de 3 años.
             </li>
             <li className='step-by-step__item completed'>
-              Contar con toda tu documentación al día.
+              Contar con toda tu documentación al día. (Pasaporte, licencia de
+              conduccón y cédula profesional)
             </li>
             <li className='step-by-step__item completed'>
               Cumplir con la experiencia y el perfil descrito según tu
@@ -209,7 +210,7 @@ const Apply = () => {
               </ul>
             </div>
           </div>
-          <div className='col-12 col-md-6 col-lg-5 col-xl-3 text-center my-2'>
+          {/*<div className='col-12 col-md-6 col-lg-5 col-xl-3 text-center my-2'>
             <div className='hiring__card blue d-flex justify-content-start h-100'>
               <div className='hiring__card--image'>
                 <Image src={technicalIcon} alt='Technical services' fill />
@@ -229,7 +230,7 @@ const Apply = () => {
                 })}
               </ul>
             </div>
-          </div>
+              </div>*/}
         </section>
       </article>
       <Footer />

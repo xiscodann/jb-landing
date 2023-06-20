@@ -44,8 +44,8 @@ const Footer = () => {
         </div>*/}
       </div>
       <p className='text-center m-0 footer__copyright p-4'>
-        © {currentYear.getFullYear()} Joe Bar Business. Copyright and rights
-        reserved
+        © {currentYear.getFullYear()} Joe Bar Business Solutions. Copyright and
+        rights reserved
       </p>
     </footer>
   );

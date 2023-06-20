@@ -77,7 +77,7 @@ const CarouselOfJobs = ({ data, type, isApplyJob }) => {
                   <h3>{title}</h3>
                   <p className='m-0'>{subtitle}</p>
                   <p className='pt-3'>
-                    <span>Experience:</span>
+                    <span>Skills:</span>
                   </p>
                 </div>
                 <div>

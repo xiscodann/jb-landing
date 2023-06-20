@@ -1,10 +1,10 @@
 [
   {
-    "title": "Automation/ Engineer Qualifications",
+    "title": "Automation Engineers",
     "type": "engineer",
     "shortTitle": "Automation",
     "image": "services-engineer-automation.jpg",
-    "subtitle": "Employees possess Automation, Robotics or Mechatronics Engineering degrees.",
+    "subtitle": "Automation, Robotics or Mechatronics engineers.",
     "description": [
       "Support the day to day automation processes during production as needed",
       "Expertise with Allen-Bradley, Siemens, and CompactLogix",
@@ -16,34 +16,71 @@
     ]
   },
   {
-    "title": "Industrial  Engineer Qualifications",
+    "title": "Industrial Maintenance Engineers",
     "type": "engineer",
-    "shortTitle": "Industrial",
+    "shortTitle": "Industrial Maintenance",
     "image": "services-engineer-industrial.jpg",
-    "subtitle": "Employees possess Industrial Engineering degrees.",
+    "subtitle": "Mechanical, Electrical or Mechatronic engineers.",
     "description": [
-      "Experience improving OEE by using visual management, visual metrics and LEAN systems.",
-      "Develop/implement lean manufacturing processes to improve production.",
-      "Contribute to 5S initiative, ensuring that improvements are sustained and entrenched within the business.",
-      "Host Kaizen improvement events.",
-      "Ensure the factory layout, both at macro and micro levels, is suitable for an efficient manufacturing process."
+      "Ability to troubleshot pneumatic, hydraulic systems",
+      "Ability to work with low and mid voltage equipment",
+      "Experience with conveyors, servo motors, VFD’s and valves",
+      "Preventive and predictive maintenance",
+      "Develop/implement preventive maintenance procedures",
+      "Experience working with CMMS, and work order systems",
+      "Objective is to improve overall equipment effectiveness (OEE)"
     ]
   },
   {
-    "title": "Mechanical Design Engineer",
+    "title": "Plant Engineers",
     "type": "engineer",
-    "shortTitle": "Mechanical Designers",
+    "shortTitle": "Plant Engineers",
     "image": "services-engineer-mechanical.jpg",
-    "subtitle": "Employees possess Mechanical or electrical engineering degrees.",
+    "subtitle": "Mechanical or Electrical engineers.",
     "description": [
-      "Meet with designers and engineers to discuss design ideas",
-      "Developing/present product designs for/to clients.",
-      "Ensure product designs meet required safety and general design standards.",
-      "Generate/modify/finalize Solid and Surface CAD models using AutoCAD and SolidWork software.",
-      "Present design perspectives for equipment improvements and adaptations.",
-      "Completing job reports."
+      "Designing and developing plans for the installation of new equipment or systems",
+      "Troubleshooting and resolving issues with existing equipment or systems",
+      "Maintaining and repairing equipment to ensure it operates efficiently and safely",
+      "Conducting regular inspections and audits to identify potential issues and areas for improvement",
+      "Coordinating with other teams within the organization to ensure projects are completed on time and within budget",
+      "Keeping up-to-date with new technologies and industry standards to continually improve processes and operations"
     ]
   },
+  {
+    "title": "Continuous improvement engineer",
+    "type": "engineer",
+    "shortTitle": "Continuous improvement",
+    "image": "services-engineer-mechanical.jpg",
+    "subtitle": "Industrial, Mechanical, Electrical or Mechatronic engineers.",
+    "description": [
+      "Identifying areas for improvement in the organization's processes and systems",
+      "Analyzing data to determine where improvements can be made",
+      "Developing and implementing strategies to improve efficiency and quality",
+      "Conducting root cause analysis to identify the underlying causes of problems",
+      "Collaborating with cross-functional teams to implement improvements",
+      "Developing and delivering training programs to support continuous improvement efforts",
+      "Monitoring and measuring the effectiveness of improvement initiatives",
+      "Reporting on progress and results to senior management",
+      "Maintaining and updating process documentation and procedures",
+      "Staying up-to-date with industry trends and best practices in continuous improvement methodologies"
+    ]
+  },
+  {
+    "title": "Plant CNC Engineers",
+    "type": "engineer",
+    "shortTitle": "Plant CNC",
+    "image": "services-engineer-mechanical.jpg",
+    "subtitle": "Industrial, Mechanical, Electrical engineers.",
+    "description": [
+      "Programming and setting up CNC machines for production runs",
+      "Monitoring the performance of CNC machines and making adjustments as needed",
+      "Developing and implementing maintenance plans for CNC equipment",
+      "Troubleshooting problems with CNC machines and resolving technical issues",
+      "Conducting quality checks on products produced by CNC machines",
+      "Collaborating with other engineers and cross-functional teams to optimize production processes and improve efficiency"
+    ]
+  },
+
   {
     "title": "Reliability / Maintenance Technicians",
     "type": "technical",

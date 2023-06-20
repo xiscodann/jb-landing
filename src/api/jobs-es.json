@@ -1,52 +1,84 @@
 [
   {
-    "title": "Ingenieros en automatización",
+    "title": "Ingeniero en Automatización y Control",
     "shortTitle": "Automatización",
     "type": "engineer",
     "match": "automatizacion",
     "image": "services-engineer-automation.jpg",
-    "subtitle": "Empleados con títulos de ingeniería en automatización, robótica o mecatrónica de las escuelas técnicas de México.",
+    "subtitle": "Ingenieros en Automatización, robótica, mecatrónica o afines con experiencia reciente de +5 años.",
     "description": [
-      "Experiencia en solución de problemas mecánicos y gestión deproyectos.",
+      "Programación de PLC's Allen Bradley, Siemens, Compac logic en diferentes lenguajes.",
+      "Migración y automatización periférica.",
+      "Solución de problemas mecánicos y gestión de proyectos.",
       "Conocimientos en programación de autómatas programables y sistemas de control.",
-      "Conocimientos de Allen-Bradley, Siemens y Compactlogix.",
       "Capacidad para solucionar fallos de equipos y realizar pruebas de sistemas complejos.",
       "Conocimientos sobre seguridad de la maquinaria y la evaluación de riesgos."
     ]
   },
   {
-    "title": "Ingenieros industriales",
+    "title": "Ingeniero en Mantenimiento Industrial",
     "shortTitle": "Industrial",
     "type": "engineer",
     "match": "ingenieria-industrial",
     "image": "services-engineer-industrial.jpg",
-    "subtitle": "Empleados con títulos de ingeniería industrial de las escuelas técnicas en México.",
+    "subtitle": "Ingenieros mecánicos, eléctricos, mecatrónicos o afines, con experiencia reciente de +5 años",
     "description": [
-      "El Ingeniero de Mejora Continua, en estrecha colaboración con el director de fabricación, aplica estratégicamente la manufactura esbelta para mejorar continuamente el proceso de producción.",
-      "Trabaja con proveedores externos para garantizar que los equipos y consumibles que se utilicen sean apropiados para las operaciones y sean la solución más eficiente.",
-      "Contribuye a la iniciativa de las 5S japonesas para asegurar que las mejoras se mantengan y afiancen a la empresa.",
-      "Organiza eventos de mejora Kaizen.",
-      "Garantiza que la distribución de la fábrica, tanto a nivel macroeconómico como microeconómico, sea la adecuada para un proceso de fabricación eficiente."
+      "Mantenimiento eléctrico y/o mecánico en plantas de manufactura, preferiblemente Alimentos.",
+      "Comprensión de propiedades mecánicas como caja de cambios, cadenas, ruedas dentadas, principios de lubricación.",
+      "Diseño mecánico y eléctrico.",
+      "Desarrollo, aplicación y mejora del mantenimiento preventivo y predictivo.",
+      "Reparación de equipos defectuosos y estructuras dañadas.",
+      "Gestión de sistemas de calefacción y fontanería para garantizar la funcionalidad.",
+      "Planificación y programación de reparaciones.",
+      "Ejecución de controles de calidad periódicos de los equipos y sistemas para garantizar que todo se ajuste a las normas.",
+      "Ejecución de tareas de mantenimiento general como jardinería, pintura y carpintería.",
+      "Mantenimiento Productivo Total (TPM)."
     ]
   },
   {
-    "title": "Diseñador mecánico",
-    "shortTitle": "Diseño mecánico",
+    "title": "Ingeniero de planta",
+    "shortTitle": "Ingeniero de planta",
     "type": "engineer",
-    "match": "diseno-mecanico",
+    "match": "ingeniero-planta",
     "image": "services-engineer-mechanical.jpg",
-    "subtitle": "Empleados con certificaciones en soldadura de las escuelas técnicas de México.",
+    "subtitle": "Ingenieros mecánicos, eléctricos, mecatrónicos o afines, con experiencia reciente de +5 años.",
     "description": [
-      "Se reúne con diseñadores e ingenieros para hablar sobre ideas de diseño.",
-      "Desarrolla diseños de productos desde cero.",
-      "Presenta borradores de diseño para que el cliente los apruebe.",
-      "Garantiza que los diseños de productos cumplan con las normas estructurales y de seguridad exigidas.",
-      "Genera modelos CAD sólidos y de superficie con AutoCAD.",
-      "Combina técnica y estética para crear diseños finales.",
-      "Presenta diversas perspectivas de diseño para mejoras y adaptaciones de la construcción.",
-      "Prepara modelos AutoCAD.",
-      "Presenta modelos a los clientes.",
-      "Realiza informes de trabajo."
+      "Trabajo con software CAD, así como conocimiento de software de modelado 3D como SolidWorks.",
+      "Diseño, instalación y mantenimiento de equipos industriales a gran escala.",
+      "Conocimiento de las regulaciones y estándares de seguridad en la industria, (regulaciones de OSHA y estándares ANSI).",
+      "Fuertes habilidades de comunicación para coordinar eficazmente con otros equipos y partes interesadas.",
+      "Fuertes habilidades para solucionar problemas e identificar oportunidades de mejora del proceso."
+    ]
+  },
+  {
+    "title": "Ingeniero de mejora continua",
+    "shortTitle": "Mejora continua",
+    "type": "engineer",
+    "match": "ingeniero-mejora-continua",
+    "image": "services-engineer-mechanical.jpg",
+    "subtitle": "Ingenieros mecánicos, eléctricos, mecatrónicos o afines, con experiencia reciente de +5 años.",
+    "description": [
+      "Metodologías de mejora continua como Lean Six Sigma",
+      "Fuertes habilidades analíticas y de resolución de problemas",
+      "Excelentes habilidades de comunicación e interpersonales para trabajar eficazmente con equipos interfuncionales",
+      "Capacidad para liderar y gestionar el cambio en una organización",
+      "Conocimiento de los principios de gestión de proyectos",
+      "La certificación en metodologías de mejora continua, como Lean y Six Sigma, puede ser preferida por algunos empleadores"
+    ]
+  },
+  {
+    "title": "Ingeniero CNC",
+    "shortTitle": "Ingeniero CNC",
+    "type": "engineer",
+    "match": "ingeniero-cnc",
+    "image": "services-engineer-mechanical.jpg",
+    "subtitle": "Ingenieros mecánicos, eléctricos, mecatrónicos o afines, con experiencia reciente de +5 años.",
+    "description": [
+      "Programación y operación de máquinas CNC y conocimiento de software CAD/CAM",
+      "Lenguajes de programación CNC",
+      "Mantenimiento y solución de problemas de equipos",
+      "Familiaridad con los estándares de seguridad y calidad de la industria",
+      "Fortalezas en comunicación y habilidades para el trabajo en equipo"
     ]
   },
   {

@@ -90,7 +90,7 @@ const Layout = () => {
         <h2>OUR SERVICES</h2>
         <section className='container row mx-auto hiring d-flex justify-content-center'>
           <div className='col-12 col-md-6 col-lg-5 col-xl-3 my-2'>
-            <div className='hiring__card red d-flex justify-content-start h-100'>
+            <div className='hiring__card red d-flex justify-content-start h-100 text-center'>
               <div className='hiring__card--image'>
                 <Image src={engineeringIcon} alt='Engineering services' fill />
               </div>
@@ -104,7 +104,7 @@ const Layout = () => {
               </ul>
             </div>
           </div>
-          <div className='col-12 col-md-6 col-lg-5 col-xl-3 my-2'>
+          {/*<div className='col-12 col-md-6 col-lg-5 col-xl-3 my-2'>
             <div className='hiring__card blue d-flex justify-content-start h-100'>
               <div className='hiring__card--image'>
                 <Image src={technicalIcon} alt='Technical services' fill />
@@ -118,7 +118,7 @@ const Layout = () => {
                 })}
               </ul>
             </div>
-          </div>
+              </div>*/}
           <div className='col-12 text-center mt-4'>
             <Link
               href={'/company#jobs'}

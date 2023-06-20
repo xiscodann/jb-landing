@@ -83,7 +83,7 @@ const Company = () => {
         </div>
         <section className='company container mx-auto row'>
           <div className='col-12 col-sm-10 col-md-8 col-lg-6'>
-            <h1>FIND YOUR TECHNICAL TALENT WITH JOE BAR BUSINESS</h1>
+            <h1>FIND YOUR TECHNICAL TALENT WITH JOE BAR BUSINESS SOLUTIONS</h1>
             <div className='w-100 text-center text-sm-start'>
               <a href='#contact' className='btn'>
                 CONTACT US
@@ -127,8 +127,8 @@ const Company = () => {
             type='engineering'
           />
         </section>
-        <span className='list-services__separator'></span>
-        <section
+        {/* <span className='list-services__separator'></span>
+       <section
           className='container list anchor'
           id='technical'
           data-aos='fade-up'
@@ -137,7 +137,7 @@ const Company = () => {
             data={availableJobs.filter(({ type }) => type === 'technical')}
             type='technical'
           />
-        </section>
+                  </section>*/}
       </article>
       <article id='contact' className='px-2 px-md-0 anchor' data-aos='fade-up'>
         <section className='container col-12 col-lg-8 contact-form mx-auto'>

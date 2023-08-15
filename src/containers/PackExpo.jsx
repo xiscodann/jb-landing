@@ -25,8 +25,10 @@ const PackExpo = () => {
       <article className='packexpo'>
         <section className='container row mx-auto'>
           <div className='col-12 col-lg-6 px-2 px-md-4 py-4 py-md-5 my-5'>
-            <h1>EVERY PLANT NEEDS A HERO. LET US HELP YOU FIND YOURS</h1>
-            <h4>Register and receive our catalog of services.</h4>
+            <h1>YOUR BUSINESS DESERVES A HERO WE'VE GOT AN ENTIRE LEAGUE</h1>
+            <h4 className='pt-4'>
+              Register and receive our catalog of services.
+            </h4>
           </div>
           <div className='col-12 col-lg-6 packexpo__iframe'>
             <iframe

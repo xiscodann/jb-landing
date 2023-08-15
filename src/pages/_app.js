@@ -19,6 +19,7 @@ import '@styles/components/Experience.scss';
 import '@styles/components/Why-us.scss';
 import '@styles/components/What-we-do.scss';
 import '@styles/components/Company.scss';
+import '@styles/components/PackExpo.scss';
 
 const bebas = Bebas_Neue({
   subsets: ['latin'],

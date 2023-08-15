@@ -1,0 +1,22 @@
+.packexpo {
+  $parent: &;
+  background: rgb(241, 242, 246);
+  background: radial-gradient(
+    circle,
+    rgba(241, 242, 246, 1) 0%,
+    rgba(235, 236, 240, 1) 100%
+  );
+  padding-top: 85px;
+  height: 100vh;
+  &__iframe {
+    iframe {
+      border-radius: 16px;
+      height: calc(100vh - 105px);
+      width: 100%;
+    }
+  }
+  h4 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 30px;
+  }
+}

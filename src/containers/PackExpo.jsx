@@ -24,7 +24,7 @@ const PackExpo = () => {
       </header>
       <article className='packexpo'>
         <section className='container row mx-auto'>
-          <div className='col-12 col-lg-6 px-2 px-md-4 py-4 py-md-5 my-5'>
+          <div className='col-12 col-lg-6 px-2 px-md-4 py-4 py-md-5 mt-5'>
             <h1>
               YOUR BUSINESS DESERVES A HERO WE&apos;VE GOT AN ENTIRE LEAGUE
             </h1>
@@ -32,16 +32,12 @@ const PackExpo = () => {
               Register and receive our catalog of services.
             </h4>
           </div>
-          <div className='col-12 col-lg-6 packexpo__iframe'>
+          <div className='col-12 col-lg-6 px-0 packexpo__iframe'>
             <iframe
               src='https://forms.office.com/Pages/ResponsePage.aspx?id=C9QmJnFR50Sca3TO1HeH9z9JSRZHvd1MueQ1Hs7RI-pUNk03S1c1VzA5NVNOODdWM1QzVEpHOUk3VS4u&embed=true'
               frameBorder='0'
               marginWidth='0'
               marginHeight='0'
-              allowfullscreen
-              webkitallowfullscreen
-              mozallowfullscreen
-              msallowfullscreen
             >
               {' '}
             </iframe>

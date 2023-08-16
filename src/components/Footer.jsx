@@ -40,7 +40,7 @@ const Footer = () => {
             <li>155 N. Lake Ave Suite 800 Pasadena, CA 91101</li>
             <li>626-510-6249</li>
             <li
-              class='text-truncate'
+              className='text-truncate'
               title='jbarrero@joebarbusinesssolutions.com'
             >
               jbarrero@joebarbusinesssolutions.com

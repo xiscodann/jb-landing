@@ -35,7 +35,7 @@
     "title": "Plant Engineers",
     "type": "engineer",
     "shortTitle": "Plant Engineers",
-    "image": "services-engineer-mechanical.jpg",
+    "image": "services-engineer-plant.jpg",
     "subtitle": "Mechanical or Electrical engineers.",
     "description": [
       "Designing and developing plans for the installation of new equipment or systems",
@@ -50,7 +50,7 @@
     "title": "Continuous improvement engineers",
     "type": "engineer",
     "shortTitle": "Continuous improvement",
-    "image": "services-engineer-mechanical.jpg",
+    "image": "services-engineer-continuous.jpg",
     "subtitle": "Industrial, Mechanical, Electrical or Mechatronic engineers.",
     "description": [
       "Identifying areas for improvement in the organization's processes and systems",
@@ -69,7 +69,7 @@
     "title": "Plant CNC Engineers",
     "type": "engineer",
     "shortTitle": "Plant CNC",
-    "image": "services-engineer-mechanical.jpg",
+    "image": "services-engineer-cnc.jpg",
     "subtitle": "Industrial, Mechanical, Electrical engineers.",
     "description": [
       "Programming and setting up CNC machines for production runs",

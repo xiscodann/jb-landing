@@ -40,7 +40,7 @@
     "shortTitle": "Ingeniero de planta",
     "type": "engineer",
     "match": "ingeniero-planta",
-    "image": "services-engineer-mechanical.jpg",
+    "image": "services-engineer-plant.jpg",
     "subtitle": "Ingenieros mecánicos, eléctricos, mecatrónicos o afines, con experiencia reciente de +5 años.",
     "description": [
       "Trabajo con software CAD, así como conocimiento de software de modelado 3D como SolidWorks.",
@@ -55,7 +55,7 @@
     "shortTitle": "Mejora continua",
     "type": "engineer",
     "match": "ingeniero-mejora-continua",
-    "image": "services-engineer-mechanical.jpg",
+    "image": "services-engineer-continuous.jpg",
     "subtitle": "Ingenieros mecánicos, eléctricos, mecatrónicos o afines, con experiencia reciente de +5 años.",
     "description": [
       "Metodologías de mejora continua como Lean Six Sigma",
@@ -71,7 +71,7 @@
     "shortTitle": "Ingeniero CNC",
     "type": "engineer",
     "match": "ingeniero-cnc",
-    "image": "services-engineer-mechanical.jpg",
+    "image": "services-engineer-cnc.jpg",
     "subtitle": "Ingenieros mecánicos, eléctricos, mecatrónicos o afines, con experiencia reciente de +5 años.",
     "description": [
       "Programación y operación de máquinas CNC y conocimiento de software CAD/CAM",
